@@ -15,8 +15,8 @@
 	\subsection{Goals}
 	\begin{itemize}
 		\item Booking a Taxi ride
-		\item Update a reservation
-		\item Delete a reservation
+		\item Update a long-term reservation
+		\item Delete a long-term reservation
 		\item Locate the Users
 		\item Managing Taxis location
 		\item Managing Taxi queue
@@ -31,6 +31,9 @@
 			\item myTaxiService: the system described in this document
 			\item User: someone who uses the services offered by myTaxiService, sometimes called also passenger
 			\item Taxi: entity composed by the taxi driver and the taxi car that transports the users
+			\item Booking: generic reservation, that is, it can be long-term reservation or a short-term one
+			\item Short-term reservation: booking, requested from the user, for the current moment
+			\item Long-term reservation: booking, requested from the user, characterized or by a time, at least two hours later than the time during that the user requests the service, or by a different day from the current one. 
 		\end{itemize}
 		\subsubsection{Acronyms}
 		\begin{itemize}
