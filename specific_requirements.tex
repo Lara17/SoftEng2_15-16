@@ -19,9 +19,35 @@
 		\end{itemize}
 	\subsection{Functional Requirements}
 		\subsubsection{Booking a Taxi ride}
+		\begin{itemize}
+		\item First of all, the system checks the date and the hour of the reservation. 
+		\item In case of long-term reservation:
+		\begin{enumerate}
+		\item the system produces an alphanumeric code;
+		\item the system stores this code, with name and surname of the user, in the relative database;
+		\item the system assigns this code to the user.
+		\end{enumerate}
+		\item In case of short-term reservation:
+		\begin{enumerate}
+		\item the system checks what is the address inserted by the user;
+		\item the system checks in which zone of the city is that address, using the GPS information;
+		\item the system controls the taxis queue of that zone;
+		\item if the taxis queue has at least the identifier of one taxi, the system sends a notification to the first taxi driver of the queue; when it will receive the confirm, the system tells the user that the reservation is been realized;
+		\item if the taxis queue hasn't got any taxis identifiers, the system checks the queue of the four adjacent zones of that area; the system continues in this way as long as it finds an available taxi; and then it will do the same things of the \textbf {PUNTO SOPRA}.
+		\end{enumerate}
+		\end{itemize}
 		\subsubsection{Update a reservation}
+		\begin{itemize}
+		\item l
+		\end{itemize}
 		\subsubsection{Delete a reservation}
+		\begin{itemize}
+		\item a
+		\end{itemize}
 		\subsubsection{Locate the Users}
+		\begin{itemize}
+		\item v
+		\end{itemize}
 		\subsubsection{Managing Taxis location}
 		\subsubsection{Managing Taxi queue}
 		\begin{itemize}
