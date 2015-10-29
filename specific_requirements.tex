@@ -24,9 +24,33 @@
 		\subsubsection{Locate the Users}
 		\subsubsection{Managing Taxis location}
 		\subsubsection{Managing Taxi queue}
+		\begin{itemize}
+			\item A taxi must be free in order to be inserted in a queue
+			\item On new rides the system always chose the first taxi in the queue
+			\item The queue is managed using a first in, first out policy
+			\item Busy taxis are not inserted in any queue
+			\item Exists only on queue per zone and it's unique
+			\item A queue contains only taxis in the related zone
+			\item 
+		\end{itemize}
 		\subsubsection{Allow Taxi to register in the system}
-		\subsubsection{Notify the users about changes in their reservation}
+		\begin{itemize}
+			\item A taxi must be not already registered to register his identifier
+			\item After the registration the taxi is added to the queue related to the actual zone of the taxi
+		\end{itemize}
+		\subsubsection{Notify the users about changes about their booking/reservation}
+		\begin{itemize}
+			\item A user must have requested a taxi ride
+			\item One user can only receive only notification about his rides
+			\item The system always notifies the user if the taxi is late or becomes not available
+		\end{itemize}
 		\subsubsection{Notify Taxis about new available rides}
+		\begin{itemize}
+			\item A taxi must be registered in the system
+			\item A taxi must be free to receive a notification
+			\item A taxi must confirm or decline the new ride
+			\item A taxi only receives notification about his rides
+		\end{itemize}
 	\subsection{The World and the Machine}
 	\subsection{Scenarios}
 		\subsubsection{Scenario 1}
