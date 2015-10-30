@@ -16,20 +16,20 @@
 		\paragraph{User side}The system allows the users to book a taxi using the website or the mobile application installed on their smart phones. They also can reserve a taxi but they must do it at least 2 hours before the chosen hour; in this case the system assigns a unique code for every reservation in order to allow users to modify or delete their reservation. The system also sends notification to the users about the status of their bookings and reservation or informations about waiting time for their ride.
 		\paragraph{Taxi side}The system allows taxi to register into it in order to be added to the queue and be given new passengers. The system also sends notification to taxis about new jobs. It also allows taxis to notify users the system about delays.
 	\subsection{User characteristics}
-    The users that intend to use the product are people that want to travel using taxis service. They should know how to use a web browser or a cellphone in order to use the web application or the mobile app. 
-    Also the taxi drivers should how to use the smart phone to be able to use the mobile application.
+    The users that intend to use the product are people that want to travel using taxis service. They should know how to use a web browser or a smarthphone in order to use the web application or the mobile app. 
+    Also the taxi drivers should how to use the smartphone to be able to use the mobile application.
 	\subsection{Constraints}
 	    \begin{itemize}
 	    \item The system must work 24 x 7.
-	    \item The system must maintain the privacy with regard to personal data of users and taxi drivers.
+	    \item The system must maintain the privacy about personal data of users and taxi drivers.
 	    \item The system must allow operations to run in parallel.
 	    \end{itemize}
 	\subsection{Assumptions}
 	    \begin{itemize}
 	    \item The terms "code" and "identifier" relate to the same thing, that is the register of the taxi.
-	    \item The fair management is characterized by: at most 10 minutes of wait; a FIFO method to organize the taxis queue.
-	    \item The zones in which the city is divided are always the same and they don't never be overlapping.
-	    \item The taxis that are outside of the city are considered busy.
-	    \item The taxis that don't answer to the system notifications of new incoming rides are considered as occupied.
+	    \item The fair queue management is characterized by: at most 10 minutes of wait; a FIFO method to organize the taxis queue.
+	    \item The zones in which the city is divided are always the same, don't change posistion and they never overlap.
+	    \item The taxis that are outside of the city or aren't in any defined zone are considered busy until they return in a known zone.
+	    \item The taxis that don't answer to the system notifications of new incoming rides are considered as busy.
 	    \item The GPS works always, pooled every 2 minutes.
 	    \end{itemize}
