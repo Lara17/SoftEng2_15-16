@@ -1,6 +1,6 @@
-myTaxiDriver
+myTaxiService
 ============
-This repository contains the documentation for the development of **myTaxiDriver** software, as part of Software Engineering 2 project @ Politecnico di Milano.
+This repository contains the documentation for the development of **myTaxiService** software, as part of Software Engineering 2 project @ Politecnico di Milano.
 
 Authors
 -------
