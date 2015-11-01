@@ -125,13 +125,13 @@
 		\subsubsection{Scenario 5}
 		Finally, today, Rossana would have taken the airplane. The flight was booked three days ago, but, because of bad weather, it was been deleted. So, she has accessed to the website of MyTaxiService to modify her reservation. She has used her notebook and then she has gone to the web page, concerning the modification/elimination of reservations. In the dedicated form, she has inserted the code that the system gave her to do this stuff, if she would have needed, but she could do it only until twenty minutes before the stipulated time. So she has postponed the reservation, without any problems.
 		One hour before the meeting with the taxi, she has received a call from her boyfriend Heric, who wasn't really enthusiastic about her decision to go to USA for the Erasmus. When he has known that Rossana hasn't left yet, Heric has decided to give her a ride to the airport. So the girl, for that moment using her smart phone (the computer was in the luggage), has accessed to the mobile application of MyTaxiService to delete definitely her reservation. Going again in the dedicated page and then inserting her code in the specific form (but now choosing the option "Elimination" from the drop-down list), she has confirmed the cancellation of the reservation. 
-			\newpage
+	\newpage
 	\subsection{UML Models}
 	\subsubsection{Use Case}
 	\paragraph{Registration of a new taxi driver}
 	\begin{center}
 	~\\
-\includegraphics[width=0.28\textwidth]{./images/UseCaseTaxiNotYetRegistered.png}~
+\includegraphics[width=0.60\textwidth]{./images/UseCaseTaxiNotYetRegistered.png}~
 	\end{center}
 	\begin{tabular}{l l}
  \textbf {Name} & Registration  \\ \hline
@@ -154,10 +154,11 @@
  \textbf{Exceptions} & Password inserted wrongly.
 \end{tabular}
 
+\newpage
 \paragraph{User side}
 	\begin{center}
 	~\\
-\includegraphics[width=0.28\textwidth]{./images/UseCaseUser.png}~
+\includegraphics[width=0.55\textwidth]{./images/UseCaseUser.png}~
 	\end{center}
 \subparagraph{Booking a ride}
 ~\\[0.2cm]
@@ -184,6 +185,11 @@
  \item send the notification to the taxi;
  \item sends a confirmation via SMS to the user.
  \end{itemize}
+  }
+ \end{tabular}
+  \newpage
+ \begin{tabular}{l l}
+ & \parbox{0.7\textwidth}{
  \emph{In case of long-term reservation}, the user
  \begin{itemize}
  \item accesses to the web site or the mobile application;
@@ -192,11 +198,6 @@
  \item specifies the date and the hour of the long-term reservation;
  \item clicks on the "Confirm" button;
  \end{itemize}
- }
- \end{tabular}
- \newpage
- \begin{tabular}{l l}
- & \parbox{0.7\textwidth}{
  the system
  \begin{itemize}
  \item if the date is the actual one, checks if the current time is at least two hours before the long-term reservation time;
@@ -217,7 +218,7 @@
  }
 \end{tabular}
 
-
+\newpage
 \subparagraph{Service Information}
 ~\\[0.2cm]
 \vspace{20pt}
@@ -238,7 +239,7 @@
  \textbf{Exceptions} & No exceptions.
 \end{tabular}
 
-
+\newpage
 \subparagraph{Modify long-term reservation}
 ~\\[0.2cm]
 \vspace{20pt}
@@ -331,12 +332,13 @@
  \textbf{Exit Condition} & No exit conditions \\ \hline
  \textbf{Exceptions} & Alphanumeric code inserted wrongly.
 \end{tabular}
-\newpage
+
 \paragraph{Taxi side}
 	\begin{center}
 	~\\
-\includegraphics[width=0.28\textwidth]{./images/UseCaseTaxi.png}~
+\includegraphics[width=0.60\textwidth]{./images/UseCaseTaxi.png}~
 	\end{center}
+\newpage
 \subparagraph{Login}
 ~\\[0.2cm]
 \vspace{20pt}
@@ -446,7 +448,7 @@
  \textbf{Exit Condition} & No exit conditions \\ \hline
  \textbf{Exceptions} & No exceptions.
 \end{tabular}
-		
+
 	\subsection{Non-Functional Requirements}
 		\subsubsection{Performance Requirements}
 	\subsection{Other requirements}
