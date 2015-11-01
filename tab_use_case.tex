@@ -1,0 +1,258 @@
+\section{USE CASE Diagram}
+\begin{tabular}{l l}
+ \textbf {Name} & Registration  \\ \hline
+ \textbf{Actors} & Taxi not yet registered \\ \hline
+ \textbf{Entry conditions} & No entry conditions \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.9\textwidth}{
+ \begin{enumerate}
+ \item The new taxi driver not yet registered
+    \begin{itemize}
+    \item opens the myTaxiService mobile application;
+    \item clicks on "Sign In" link;
+    \item inserts name, surname, email address and a password for the login, after the opening of a new window;
+    \item clicks on "Confirm" link;
+    \end{itemize}
+ \item the system assigns an identifier, that is the register of the new taxi and which will be used by the new taxi driver as his username for the login.
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} &  \parbox{0.9\textwidth}{The system adds the new taxi driver to the database and it grants him access to the application.} \\ \hline
+ \textbf{Exceptions} & Password inserted wrongly.
+\end{tabular}
+
+\vspace{20pt}
+\noindent
+\begin{tabular}{l l}
+ \textbf {Name} & Login  \\ \hline
+ \textbf{Actors} & Taxi \\ \hline
+ \textbf{Entry conditions} & No entry conditions \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.9\textwidth}{
+ \begin{enumerate}
+ \item The taxi
+    \begin{itemize}
+    \item opens the myTaxiService mobile application;
+    \item clicks on "Log in" link;
+    \item inserts username and password, after the opening of a new window;
+    \item clicks on "Confirm" link;
+    \end{itemize}
+ \item the system accepts the data inserted and the main page is shown to the taxi driver.
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} & No exit conditions \\ \hline
+ \textbf{Exceptions} & \parbox{0.9\textwidth}{If the username and/or the password inserted don't exist in the database, an error message will be shown.}
+\end{tabular}
+
+\vspace{20pt}
+\noindent
+\begin{tabular}{l l}
+ \textbf {Name} & View information about the current ride  \\ \hline
+ \textbf{Actors} & Taxi \\ \hline
+ \textbf{Entry conditions} & Login successful \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.9\textwidth}{
+ \begin{enumerate}
+ \item The taxi clicks on "View information";
+ \item the system loads from the database the information of the current ride.
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} & No exit conditions \\ \hline
+ \textbf{Exceptions} & No exceptions.
+\end{tabular}
+
+\vspace{20pt}
+\noindent
+\begin{tabular}{l l}
+ \textbf {Name} & View information about the previous rides  \\ \hline
+ \textbf{Actors} & Taxi \\ \hline
+ \textbf{Entry conditions} & Login successful \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.9\textwidth}{
+ \begin{enumerate}
+ \item The taxi clicks on "View history";
+ \item the system loads from the database the information of all the previous rides.
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} & No exit conditions \\ \hline
+ \textbf{Exceptions} & No exceptions.
+\end{tabular}
+
+\vspace{20pt}
+\noindent
+\begin{tabular}{l l}
+ \textbf {Name} & Send delay notification  \\ \hline
+ \textbf{Actors} & Taxi \\ \hline
+ \textbf{Entry conditions} & Login successful \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.9\textwidth}{
+ \begin{enumerate}
+ \item The taxi clicks on "Send delay notification";
+ \item the system advises the user about the delay.
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} & No exit conditions \\ \hline
+ \textbf{Exceptions} & No exceptions.
+\end{tabular}
+
+\vspace{20pt}
+\noindent
+\begin{tabular}{l l}
+ \textbf {Name} & View long-term reservation  \\ \hline
+ \textbf{Actors} & User \\ \hline
+ \textbf{Entry conditions} & No entry conditions \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.9\textwidth}{
+ \begin{enumerate}
+ \item The user
+ \begin{itemize}
+ \item accesses to the web site or the mobile application;
+ \item clicks on "View booking";
+ \item inserts the alphanumeric code;
+ \end{itemize}
+ \item the system loads from the database the information about the long-term reservation.
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} & No exit conditions \\ \hline
+ \textbf{Exceptions} & Alphanumeric code inserted wrongly.
+\end{tabular}
+
+\vspace{20pt}
+\noindent
+\begin{tabular}{l l}
+ \textbf {Name} & Delete long-term reservation  \\ \hline
+ \textbf{Actors} & User \\ \hline
+ \textbf{Entry conditions} & No entry conditions \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.9\textwidth}{
+ \begin{enumerate}
+ \item The user
+ \begin{itemize}
+ \item accesses to the web site or the mobile application;
+ \item clicks on "Modify/Delete long-term reservation";
+ \item inserts the alphanumeric code;
+ \item clicks on the "Confirm" button;
+ \item chooses "Elimination";
+ \item clicks on "Continue" link;
+ \end{itemize}
+ \item the system
+ \begin{itemize}
+ \item sends a confirmation via SMS to the user;
+ \item deletes the data of the user and the ones of the long-term reservation from the database.
+ \end{itemize}
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} & No exit conditions \\ \hline
+ \textbf{Exceptions} & Alphanumeric code inserted wrongly.
+\end{tabular}
+
+\vspace{20pt}
+\noindent
+\begin{tabular}{l l}
+ \textbf {Name} & Modify long-term reservation  \\ \hline
+ \textbf{Actors} & User \\ \hline
+ \textbf{Entry conditions} & No entry conditions \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.9\textwidth}{
+ \begin{enumerate}
+ \item The user
+ \begin{itemize}
+ \item accesses to the web site or the mobile application;
+ \item clicks on "Modify/Delete long-term reservation";
+ \item inserts the alphanumeric code;
+ \item clicks on the "Confirm" button;
+ \item chooses "Modification";
+ \item clicks on "Continue" link;
+ \item modifies the date and/or the hour;
+ \item clicks on "Confirm" button;
+ \end{itemize}
+ \item the system
+ \begin{itemize}
+ \item sends a confirmation via SMS to the user;
+ \item modifies the changed data of the long-term reservation from the database.
+ \end{itemize}
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} & No exit conditions \\ \hline
+ \textbf{Exceptions} &  \parbox{0.9\textwidth}{ 
+ \begin{itemize}
+ \item Alphanumeric code inserted wrongly;
+ \item data and/or hour not valid.
+ \end{itemize}
+ }
+\end{tabular}
+
+
+\vspace{20pt}
+\noindent
+\begin{tabular}{l l}
+ \textbf {Name} & Book a ride  \\ \hline
+ \textbf{Actors} & User \\ \hline
+ \textbf{Entry conditions} & No entry conditions \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.9\textwidth}{
+ \begin{enumerate}
+ \item In case of short-term reservation, the user
+ \begin{itemize}
+ \item accesses to the web site or the mobile application;
+ \item clicks on "Book a ride";
+ \item inserts name, surname, phone number and address;
+ \item clicks on the "Confirm" button;
+ \end{itemize}
+ \item the system
+ \begin{itemize}
+ \item inserts the data of the user in the database;
+ \item identifies the area in which the address specified by the user is;
+ \item selects the first available taxi from the taxis queue;
+ \item send the notification to the taxi;
+ \item sends a confirmation via SMS to the user.
+ \end{itemize}
+ \item In case of long-term reservation, the user
+ \begin{itemize}
+ \item accesses to the web site or the mobile application;
+ \item clicks on "Book a ride";
+ \item inserts name, surname, phone number and address;
+ \item specifies the date and the hour of the long-term reservation;
+ \item clicks on the "Confirm" button;
+ \end{itemize}
+ \item the system
+ \begin{itemize}
+ \item if the date is the actual one, checks if the current time is at least two hours before the long-term reservation time;
+ \item inserts the data of the user in the database;
+ \item sends a confirmation via SMS to the user.
+ \end{itemize}
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} & No exit conditions \\ \hline
+ \textbf{Exceptions} &  \parbox{0.9\textwidth}{ 
+ \begin{itemize}
+ \item Address inserted wrongly;
+ \item data and/or hour not valid.
+ \end{itemize}
+ }
+\end{tabular}
+
+
+\vspace{20pt}
+\noindent
+\begin{tabular}{l l}
+ \textbf {Name} & Confirm service  \\ \hline
+ \textbf{Actors} & Taxi \\ \hline
+ \textbf{Entry conditions} & Login successful \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.9\textwidth}{
+ \begin{enumerate}
+ \item The taxi
+ \begin{itemize}
+ \item clicks on the received notification;
+ \item clicks on "Confirm" or "Refuse";
+ \end{itemize}
+ \item the system
+  \begin{itemize}
+ \item sends a notification to the user, if the taxi confirms the service;
+ \item otherwise searches the next available taxi in the queue.
+ \end{itemize}
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} & No exit conditions \\ \hline
+ \textbf{Exceptions} & No exceptions.
+\end{tabular}
