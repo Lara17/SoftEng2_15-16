@@ -218,7 +218,11 @@
  \begin{itemize}
  \item if the date is the actual one, checks if the current time is at least two hours before the long-term reservation time;
  \item inserts the data of the user in the database;
- \item sends a confirmation via SMS to the user.
+ \item sends a confirmation via SMS to the user;
+ \item ten minutes before the meeting time with the user, searches in the taxis queue of that area the first available taxi;
+ \item sends a notification to that taxi;
+ \item if the taxi accepts the service, sends a confirmation to the user;
+ \item otherwise, searches the next available taxi.
  \end{itemize}
  \end{enumerate}
  } \\ \hline
@@ -251,6 +255,24 @@
  \item sends a notification to the user, if the taxi confirms the service;
  \item otherwise searches the next available taxi in the queue.
  \end{itemize}
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} & No exit conditions \\ \hline
+ \textbf{Exceptions} & No exceptions.
+\end{tabular}
+
+\vspace{20pt}
+\noindent
+\begin{tabular}{l l}
+ \textbf {Name} & Service Information  \\ \hline
+ \textbf{Actors} & User \\ \hline
+ \textbf{Entry conditions} & No entry conditions \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.9\textwidth}{
+ \begin{enumerate}
+ \item The user accesses to the myTaxiService web site or the mobile application.
+ \item The user clicks on "Service Information" link.
+ \item The user can learn about the myTaxiService.
  \end{enumerate}
  } \\ \hline
  \textbf{Exit Condition} & No exit conditions \\ \hline
