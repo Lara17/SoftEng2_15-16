@@ -106,8 +106,8 @@
 		\item the system checks what is the address inserted by the user;
 		\item the system checks in which zone of the city is that address, using the GPS information;
 		\item the system controls the taxis queue of that zone;
-		\item if the taxis queue has at least the identifier of one taxi, the system sends a notification to the first taxi driver of the queue; when it will receive the confirm, the system tells the user that the reservation is been realized;
-		\item if the taxis queue hasn't got any taxis identifiers, the system checks the queue of the four adjacent zones of that area; the system continues in this way as long as it finds an available taxi; and then it will do the same things of the \textbf {PUNTO SOPRA}; when the system will receive the confirm, it tells the user that there will be a delay; if the user decides to accept, the system tells him/her that the reservation is been realized, otherwise not.
+		\item if the taxis queue contains at least the identifier of one taxi, the system sends a notification to the first taxi driver of the queue; when it will receive the confirm, the system tells the user that the reservation is been realized;
+		\item if the taxis queue hasn't got any taxis identifiers, the system checks the queue of the four adjacent zones of that area; the system continues in this way as long as it finds an available taxi; and then it will do the same things of the previous point; when the system will receive the confirm, it tells the user that there will be a delay; if the user decides to accept, the system tells him/her that the reservation is been realized, otherwise not.
 		\end{enumerate}
 		\end{itemize}
 		\subsubsection{Update a long-term reservation}
@@ -136,11 +136,10 @@
 		\begin{itemize}
 			\item A taxi must be free in order to be inserted in a queue
 			\item On new rides the system always chose the first taxi in the queue
-			\item The queue is managed using a first in, first out policy
+			\item The queue is managed using a FIFO policy
 			\item Busy taxis are not inserted in any queue
 			\item Exists only on queue per zone and it's unique
-			\item A queue contains only taxis in the related zone
-			\item 
+			\item A queue contains only taxis of the corresponding zone
 		\end{itemize}
 		\subsubsection{Allow Taxi to register in the system}
 		\begin{itemize}
@@ -224,7 +223,7 @@
 \noindent
 \begin{tabular}{l l}
  \textbf {Name} & Book a ride  \\ \hline
- \textbf{Actors} & User \\ \hline
+ \textbf{Actors} & User, Taxi \\ \hline
  \textbf{Entry conditions} & No entry conditions \\ \hline
  \textbf{Event flow} & 
  \parbox{0.7\textwidth}{
@@ -235,7 +234,7 @@
  \item inserts name, surname, phone number and address;
  \item clicks on the "Confirm" button;
  \end{itemize}
- the system
+ and the system
  \begin{itemize}
  \item inserts the data of the user in the database;
  \item identifies the area in which the address specified by the user is;
@@ -256,7 +255,7 @@
  \item specifies the date and the hour of the long-term reservation;
  \item clicks on the "Confirm" button;
  \end{itemize}
- the system
+ and the system
  \begin{itemize}
  \item if the date is the actual one, checks if the current time is at least two hours before the long-term reservation time;
  \item inserts the data of the user in the database;
