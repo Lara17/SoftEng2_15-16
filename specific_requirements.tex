@@ -207,7 +207,7 @@
  \item the system assigns an identifier, that is the register of the new taxi and which will be used by the new taxi driver as his username for the login.
  \end{enumerate}
  } \\ \hline
- \textbf{Exit Condition} &  \parbox{0.7\textwidth}{The system adds the new taxi driver to the database and it grants him access to the application.} \\ \hline
+ \textbf{Exit Condition} &  \parbox{0.7\textwidth}{The system adds the new taxi driver in the database and it grants him access to the application.} \\ \hline
  \textbf{Exceptions} & Password inserted wrongly.
 \end{tabular}
 
@@ -222,12 +222,12 @@
 	\vspace{20pt}
 \noindent
 \begin{tabular}{l l}
- \textbf {Name} & Book a ride  \\ \hline
+ \textbf{Name} & Book a short-term reservation  \\ \hline
  \textbf{Actors} & User, Taxi \\ \hline
  \textbf{Entry conditions} & No entry conditions \\ \hline
  \textbf{Event flow} & 
  \parbox{0.7\textwidth}{
- \emph{In case of short-term reservation}, the user
+ The user
  \begin{itemize}
  \item accesses to the web site or the mobile application;
  \item clicks on "Book a ride";
@@ -243,11 +243,18 @@
  \item sends a confirmation via SMS to the user.
  \end{itemize}
   }
+  \textbf{Exit conditions} & \parbox{0.7\textwidth}{The system adds the user information in the database.} \\ \hline
+  \textbf{Exceptions} & Address inserted wrongly.
  \end{tabular}
-  \newpage
+ 
+ \newpage
  \begin{tabular}{l l}
+ \textbf{Name} & Book a long-term reservation \\ \hline
+ \textbf{Actors} & User, Taxi \\ \hline
+ \textbf{Entry conditions} & No entry conditions
+ \textbf{Event flow}
  & \parbox{0.7\textwidth}{
- \emph{In case of long-term reservation}, the user
+ The user
  \begin{itemize}
  \item accesses to the web site or the mobile application;
  \item clicks on "Book a ride";
