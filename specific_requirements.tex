@@ -215,66 +215,59 @@
 \paragraph{User side}
 	\begin{center}
 	~\\
-\includegraphics[width=0.55\textwidth]{./images/UseCaseUser.png}~
+\includegraphics[width=0.90\textwidth]{./images/UseCaseUser.png}~
 	\end{center}
+\newpage
 \subparagraph{Booking a ride}
 ~\\[0.2cm]
 	\vspace{20pt}
 \noindent
+
 \begin{tabular}{l l}
- \textbf{Name} & Book a short-term reservation  \\ \hline
+ \textbf {Name} & Book a short-term reservation  \\ \hline
  \textbf{Actors} & User, Taxi \\ \hline
  \textbf{Entry conditions} & No entry conditions \\ \hline
  \textbf{Event flow} & 
  \parbox{0.7\textwidth}{
- The user
- \begin{itemize}
- \item accesses to the web site or the mobile application;
- \item clicks on "Book a ride";
- \item inserts name, surname, phone number and address;
- \item clicks on the "Confirm" button;
- \end{itemize}
- and the system
- \begin{itemize}
- \item inserts the data of the user in the database;
- \item identifies the area in which the address specified by the user is;
- \item selects the first available taxi from the taxis queue;
- \item send the notification to the taxi;
- \item sends a confirmation via SMS to the user.
- \end{itemize}
-  }
-  \textbf{Exit conditions} & \parbox{0.7\textwidth}{The system adds the user information in the database.} \\ \hline
-  \textbf{Exceptions} & Address inserted wrongly.
- \end{tabular}
- 
- \newpage
- \begin{tabular}{l l}
- \textbf{Name} & Book a long-term reservation \\ \hline
- \textbf{Actors} & User, Taxi \\ \hline
- \textbf{Entry conditions} & No entry conditions
- \textbf{Event flow}
- & \parbox{0.7\textwidth}{
- The user
- \begin{itemize}
- \item accesses to the web site or the mobile application;
- \item clicks on "Book a ride";
- \item inserts name, surname, phone number and address;
- \item specifies the date and the hour of the long-term reservation;
- \item clicks on the "Confirm" button;
- \end{itemize}
- and the system
- \begin{itemize}
- \item if the date is the actual one, checks if the current time is at least two hours before the long-term reservation time;
- \item inserts the data of the user in the database;
- \item sends a confirmation of the long-term reservation via SMS to the user;
- \item ten minutes before the meeting time with the user, searches in the taxis queue of that area the first available taxi;
- \item sends a notification to that taxi;
- \item if the taxi accepts the service, sends a confirmation to the user;
- \item otherwise, searches the next available taxi.
- \end{itemize}
+ \begin{enumerate}
+ \item The user accesses to the web site or the mobile application.
+ \item The user clicks on "Book a ride".
+ \item The user inserts name, surname, phone number and address.
+ \item The user clicks on the "Confirm" button.
+ \item The system inserts the data of the user in the database.
+ \item The system identifies the area in which the address specified by the user is.
+ \item The system selects the first available taxi from the taxis queue.
+ \item The system sends the notification to the taxi.
+ \item The system sends a confirmation via SMS to the user.
+ \end{enumerate}
  } \\ \hline
- \textbf{Exit Condition} & No exit conditions \\ \hline
- \textbf{Exceptions} &  \parbox{0.7\textwidth}{ 
+ \textbf{Exit Condition} & \parbox{0.7\textwidth}{ The system adds the user information in the database.}\\ \hline
+ \textbf{Exceptions} & Address inserted wrongly.
+\end{tabular}
+
+\begin{tabular}{l l}
+ \textbf {Name} & Book a long-term reservation  \\ \hline
+ \textbf{Actors} & User, Taxi \\ \hline
+ \textbf{Entry conditions} & No entry conditions \\ \hline
+ \textbf{Event flow} & 
+ \parbox{0.7\textwidth}{
+ \begin{enumerate}
+ \item The user accesses to the web site or the mobile application.
+ \item The user clicks on "Book a ride".
+ \item The user inserts name, surname, phone number and address.
+ \item The user specifies the date and the hour of the long-term reservation.
+ \item The user clicks on the "Confirm" button.
+ \item If the date is the actual one, the system checks if the current time is at least two hours before the long-term reservation time.
+ \item The system inserts the data of the user in the database.
+ \item The system sends a confirmation of the long-term reservation via SMS to the user.
+ \item Ten minutes before the meeting time with the user, the system searches in the taxis queue of that area the first available taxi.
+ \item The system sends a notification to that taxi.
+ \item If the taxi accepts the service, the system sends a confirmation to the user.
+ \item Otherwise, the system searches the next available taxi.
+ \end{enumerate}
+ } \\ \hline
+ \textbf{Exit Condition} & No exit conditions\\ \hline
+ \textbf{Exceptions} & \parbox{0.7\textwidth}{ 
  \begin{itemize}
  \item Address inserted wrongly;
  \item data and/or hour not valid.
@@ -400,7 +393,7 @@
 \paragraph{Taxi side}
 	\begin{center}
 	~\\
-\includegraphics[width=0.60\textwidth]{./images/UseCaseTaxi.png}~
+\includegraphics[width=0.70\textwidth]{./images/UseCaseTaxi.png}~
 	\end{center}
 
 \subparagraph{Login}
@@ -427,6 +420,7 @@
  \textbf{Exit Condition} & No exit conditions \\ \hline
  \textbf{Exceptions} & \parbox{0.7\textwidth}{If the username and/or the password inserted don't exist in the database, an error message will be shown.}
 \end{tabular}
+
 \newpage
 \subparagraph{Confirmation/Refusal of the service}
 ~\\[0.2cm]
@@ -516,4 +510,3 @@
 	\subsection{Non-Functional Requirements}
 		\subsubsection{Performance Requirements}
 	\subsection{Other requirements}
-	
