@@ -165,13 +165,19 @@
 	\end{center}
 	\subsection{Scenarios}
 		\subsubsection{Scenario 1}
-		Bob has a meeting in Los Angeles two day from now; since he hasn't a car, he decides that he'll call myTaxiService to rent a taxi to take him to the airport. He grabs his cellphone and, with the dedicated app, he books a taxi. The app asks him his name, his surname and where he wants to wait for the taxi. He inserts all the data and, after the server has stored, it notifies Bob that he will receive a notification directly on his phone. The chosen day, 10 minutes before the appointment, the system calls the first free taxi in the nearest zone to the specified location. Unfortunately the first taxi doesn't answer the call so the system puts him at the end of the queue and calls the second one that accepts the assignment and drive Bob to his destination.
+		Bob has a meeting in Los Angeles the day after tomorrow. Since he hasn't a car, he decides to use myTaxiService and rent a taxi to take him to the airport. He grabs his cell phone and, with the mobile application of the service, he books a taxi. The app asks him his name, his surname, his phone number and where he wants to wait for the taxi. He inserts all the data and, after the server has stored these information, with a SMS, it notifies Bob that the long-term reservation has been realized correctly. 
+		The chosen day, ten minutes before the appointment, the system calls the first available taxi, searching it in the taxis queue of the zone in which there is the address specified by Bob. Unfortunately the first taxi doesn't answer the call; so the system puts him at the end of the queue and it calls the second tai of the queue, which accepts the assignment. Then, Bob receives from the system, via SMS, a notification in which it was clarified that a taxi was coming to drive him to his destination.
 		
 		\subsubsection{Scenario 2}
+		Today Francois starts his new job of taxi driver. Yesterday morning, he decided to sign up himself in myTaxiService application. Through his smart phone, he inserted only four information: his name, his surname, his email address and finally a password which he will use to sign in. After that, the system assigned him an alphanumeric code, that was the register of his taxi.
+		During this morning, Francois signs in, inserting the username, that is the register of his taxi, and the password that he already choose. Clicking on the "Confirm" button, he accesses in the homepage of the mobile application. Francois has many possibilities to choose: he can view information about the current ride; he can view all the rides that he did in the past; he can send notifications of delay to the system and finally he can log out, of course at the end of the business day.
+		While he is browsing the mobile application, Francois receives from the system a notification of a new ride. After the opening of this notification, Francois confirms the service and his business day starts. 
+		
 		Ann receives a call from one of her friend that tells her that her best friend has given birth to her son, Jimmy. Ann, due to the trains' strike decides to call myTaxiService to take her to the hospital to visit the newborn. So from her pc, she opens www.mytaxiservice.com, goes to the book a taxi section and after she has inserted all the needed data the system tells her that no taxis are available at the moment in the specified zone. Ann that now has become a Desperate Housewife, notice that the system also tells her that a taxi is free from a nearby zone but she has to wait more than the average time for the taxi. Ann decides that waiting up to an hour is not a problem so books the taxi and waits for it. 
 		
 		\subsubsection{Scenario 3}
-		Carl wants to go to visit one of his friends. Using the phone books a taxi. The system then notifies the first taxi in the zone's queue and the taxi confirm the job. Unfortunately a taxi's tyre run flat so the taxi driver has to inform the system that he can't complete the job because a tire is gone, so the system puts him at te end of the queue and calls the second one that accepts the assignment and completes it.
+		Carl wants to go to visit one of his friends. Using the smart phone, he accesses to myTaxiService mobile application and he books a taxi, inserting name surname phone number and address, in the relative form. The system stores these information in the database and then it checks in which zone there is the address specified by Carl. After that, the system notifies the first taxi in that zone's queue. The taxi receives a notification about that service by the system and he confirms the job, through the mobile application installed on his own smart phone. 
+		Unfortunately a taxi's tyre runs flat; so the taxi driver sends a delay notification to the system, informing it that he can't complete the job. After the receive of this notification, therefore, the system puts that taxi at the end of the queue and it calls the second one that accepts the assignment. The system advises Carl, via SMS, that there will be a little delay.
 		
 		\subsubsection{Scenario 4}
 		Thanks to one of his closest friends, Tizio has known a service, called MyTaxiService, that lets to book a taxi, through the web application or the user-friendly mobile one.
@@ -191,5 +197,12 @@
 		\input{class_diagram}
 		\input{alloy}
 	\subsection{Non-Functional Requirements}
+		\begin{itemize}
+		\item The system will provide a secure access to their personal page for all the taxi drivers, using a username and a password.
+		\item In case of long-term reservation, the user must book a taxi at least two hours before the meeting time.
+		\item In case of long-term reservation modification or elimination, the user must do it at least 15 minutes before the meeting time.
+	    \item The system will be used the GPS information to locate the taxis position.
+	    \item If a taxi doesn't answer to a service notification in at most 5 minutes, the system moves it at the end of the queue and it sends a notification to the new first available taxi of that queue. 
+		\end{itemize}
 		\subsubsection{Performance Requirements}
 	\subsection{Other requirements}
