@@ -132,32 +132,37 @@
 		\item The system searches in which zone of the city is that address, using the GPS information.
 		\end{itemize}		
 		\subsubsection{Managing Taxis location}
+		\begin{itemize}
+		\item The system uses the GPS informations.
+		\item The system locates the position of all the taxis in the city.
+		\item The system saves these information in the database.
+		\end{itemize}
 		\subsubsection{Managing Taxi queue}
 		\begin{itemize}
-			\item A taxi must be free in order to be inserted in a queue
-			\item On new rides the system always chose the first taxi in the queue
-			\item The queue is managed using a FIFO policy
-			\item Busy taxis are not inserted in any queue
-			\item Exists only on queue per zone and it's unique
-			\item A queue contains only taxis of the corresponding zone
+			\item A taxi must be free in order to be inserted in a queue.
+			\item On new rides the system always chose the first taxi in the queue.
+			\item The queue is managed using a FIFO policy.
+			\item Busy taxis are not inserted in any queue.
+			\item Exists only on queue per zone and it's unique.
+			\item A queue contains only taxis of the corresponding zone.
 		\end{itemize}
 		\subsubsection{Allow Taxi to register in the system}
 		\begin{itemize}
-			\item A taxi must be not already registered to register his identifier
-			\item After the registration the taxi is added to the queue related to the actual zone of the taxi
+			\item A taxi must be not already registered to register his identifier.
+			\item After the registration, the taxi is added to the queue related to the actual zone of the taxi.
 		\end{itemize}
 		\subsubsection{Notify the users about their booking changes}
 		\begin{itemize}
-			\item A user must have requested a taxi ride
-			\item One user can only receive only notification about his rides
-			\item The system always notifies the user if the taxi is late or becomes not available
+			\item A user must have requested a taxi ride.
+			\item One user can only receive only notification about his rides.
+			\item The system always notifies the user if the taxi is late or becomes not available.
 		\end{itemize}
 		\subsubsection{Notify Taxis about new available rides}
 		\begin{itemize}
-			\item A taxi must be registered in the system
-			\item A taxi must be free to receive a notification
-			\item A taxi must confirm or decline the new ride
-			\item A taxi only receives notification about his rides
+			\item A taxi must be registered in the system.
+			\item A taxi must be free to receive a notification.
+			\item A taxi must confirm or decline the new ride.
+			\item A taxi only receives notification about his rides.
 		\end{itemize}
 	\subsection{The World and the Machine}
 	\begin{center}
@@ -165,29 +170,30 @@
 	\end{center}
 	\subsection{Scenarios}
 		\subsubsection{Scenario 1}
-		Bob has a meeting in Los Angeles the day after tomorrow. Since he hasn't a car, he decides to use myTaxiService and rent a taxi to take him to the airport. He grabs his cell phone and, with the mobile application of the service, he books a taxi. The app asks him his name, his surname, his phone number and where he wants to wait for the taxi. He inserts all the data and, after the server has stored these information, with a SMS, it notifies Bob that the long-term reservation has been realized correctly. 
-		The chosen day, ten minutes before the appointment, the system calls the first available taxi, searching it in the taxis queue of the zone in which there is the address specified by Bob. Unfortunately the first taxi doesn't answer the call; so the system puts him at the end of the queue and it calls the second tai of the queue, which accepts the assignment. Then, Bob receives from the system, via SMS, a notification in which it was clarified that a taxi was coming to drive him to his destination.
+		Bob has a meeting in Los Angeles the day after tomorrow. Since he hasn't a car, he decides to use myTaxiService and therefore rent a taxi to go to the airport. He grabs his cell phone and, with the mobile application of the service, he books a taxi. The app asks him his name, his surname, his phone number and the address where he wants to wait for the taxi. He inserts all the data requested and, after the server has stored these information in the database, with a SMS, it notifies Bob that the long-term reservation has been realized correctly. 
+		The chosen day, ten minutes before the appointment, the system calls the first available taxi, searching it in the taxis queue of the zone in which there is the address specified by Bob. Unfortunately the first taxi doesn't answer the call; so the system puts him at the end of the queue and it calls the second taxi of the queue, which accepts the assignment. Then, Bob receives from the system, via SMS, a notification in which it was clarified that a taxi was coming to drive him to his destination.
 		
 		\subsubsection{Scenario 2}
-		Today Francois starts his new job of taxi driver. Yesterday morning, he decided to sign up himself in myTaxiService application. Through his smart phone, he inserted only four information: his name, his surname, his email address and finally a password which he will use to sign in. After that, the system assigned him an alphanumeric code, that was the register of his taxi.
-		During this morning, Francois signs in, inserting the username, that is the register of his taxi, and the password that he already choose. Clicking on the "Confirm" button, he accesses in the homepage of the mobile application. Francois has many possibilities to choose: he can view information about the current ride; he can view all the rides that he did in the past; he can send notifications of delay to the system and finally he can log out, of course at the end of the business day.
-		While he is browsing the mobile application, Francois receives from the system a notification of a new ride. After the opening of this notification, Francois confirms the service and his business day starts. 
-		
-		Ann receives a call from one of her friend that tells her that her best friend has given birth to her son, Jimmy. Ann, due to the trains' strike decides to call myTaxiService to take her to the hospital to visit the newborn. So from her pc, she opens www.mytaxiservice.com, goes to the book a taxi section and after she has inserted all the needed data the system tells her that no taxis are available at the moment in the specified zone. Ann that now has become a Desperate Housewife, notice that the system also tells her that a taxi is free from a nearby zone but she has to wait more than the average time for the taxi. Ann decides that waiting up to an hour is not a problem so books the taxi and waits for it. 
+		Today Francois starts his new job as a taxi driver. Yesterday morning, he signed up himself in myTaxiService application. Through his smart phone, he inserted only four information: his name, his surname, his email address and finally a password which he will use to sign in. After that, the system assigned him an alphanumeric code, that was the register of the taxi, which he will drive.
+		During this morning, Francois signs in, inserting the username, that is the register of his taxi, and the password that he choose yesterday, during the registration. Clicking on the "Confirm" button, he accesses in the homepage of the mobile application. Francois has many possibilities to choose: he can view information about the current ride; he can view all the rides that he did in the past; he can send notifications of delay to the system and finally he can log out, of course at the end of the business day.
+		While he is browsing the mobile application, Francois receives from the system a notification of a new ride. After the opening of this notification, Francois confirms the service and his business day starts.  
 		
 		\subsubsection{Scenario 3}
-		Carl wants to go to visit one of his friends. Using the smart phone, he accesses to myTaxiService mobile application and he books a taxi, inserting name surname phone number and address, in the relative form. The system stores these information in the database and then it checks in which zone there is the address specified by Carl. After that, the system notifies the first taxi in that zone's queue. The taxi receives a notification about that service by the system and he confirms the job, through the mobile application installed on his own smart phone. 
+		Carl wants to go to visit one of his friends. Using the smart phone, he accesses to myTaxiService mobile application and he books a taxi, inserting name surname phone number and address, in the relative forms. The system stores these information in the database and then it checks in which zone there is the address specified by Carl. After that, the system notifies the first taxi in that zone's queue. The taxi receives a notification about that service by the system and he confirms the job, through the mobile application installed on his own smart phone. 
 		Unfortunately a taxi's tyre runs flat; so the taxi driver sends a delay notification to the system, informing it that he can't complete the job. After the receive of this notification, therefore, the system puts that taxi at the end of the queue and it calls the second one that accepts the assignment. The system advises Carl, via SMS, that there will be a little delay.
 		
 		\subsubsection{Scenario 4}
 		Thanks to one of his closest friends, Tizio has known a service, called MyTaxiService, that lets to book a taxi, through the web application or the user-friendly mobile one.
-		Whereas his computer was broken, using his smart phone, first of all, Tizio has inserted his personal data, that were name, surname and home address. Then, he has chosen the day and the hour for the service. In that moment, the system has received the request of Tizio and it has checked in what zone of the city Tizio was asking for the service. In the taxis queue of that area, the system could have verify that there were no taxis. So it has become to check, starting from the zones near the area in which Tizio has requested a taxi, all the lists of available taxis. 
-		Finally the system has found the only one taxi which, in that moment, was available. So the system has sent to Caio the notification of the new route. Besides Caio was standing, with his taxi, in a zone far from the place in which there was Tizio, he has confirmed the service, using the mobile application of his smart phone. After receiving the confirmation, the system has warned Tizio that the taxi would be arrived.
+		Whereas his computer was broken, using his smart phone, first of all, Tizio has inserted his personal data, that were name, surname, phone number and home address. In that moment, the system has received the request of Tizio and it has checked in what zone of the city Tizio was asking for the service. In the taxis queue of that area, the system could have verify that there were no taxis. So it has become to check, starting from the zones near the area in which Tizio has requested a taxi, all the lists of available taxis. 
+		Finally the system has found the only one taxi which, in that moment, was available. So the system has sent to Caio the notification of the new route. Besides Caio was standing, with his taxi, in a zone far from the place in which there was Tizio, he has confirmed the service, using the mobile application of his smart phone. After receiving the confirmation, the system has warned Tizio that the taxi would be arrived with a delay.
 		About one hour later, Tizio is get into the Caio car and so, in a short time, he is arrived in the place where he would have meet his girlfriend Sempronia, relaxing himself, discovering that she was late more than him.
-
+		
 		\subsubsection{Scenario 5}
-		Finally, today, Rossana would have taken the airplane. The flight was booked three days ago, but, because of bad weather, it was been deleted. So, she has accessed to the website of MyTaxiService to modify her reservation. She has used her notebook and then she has gone to the web page, concerning the modification/elimination of reservations. In the dedicated form, she has inserted the code that the system gave her to do this stuff, if she would have needed, but she could do it only until twenty minutes before the stipulated time. So she has postponed the reservation, without any problems.
-		One hour before the meeting with the taxi, she has received a call from her boyfriend Heric, who wasn't really enthusiastic about her decision to go to USA for the Erasmus. When he has known that Rossana hasn't left yet, Heric has decided to give her a ride to the airport. So the girl, for that moment using her smart phone (the computer was in the luggage), has accessed to the mobile application of MyTaxiService to delete definitely her reservation. Going again in the dedicated page and then inserting her code in the specific form (but now choosing the option "Elimination" from the drop-down list), she has confirmed the cancellation of the reservation. 
+		Ann receives a call from one of her friend that tells her that her best friend has given birth to her son, Jimmy. Ann, due to the trains' strike decides to call myTaxiService to take her to the hospital to visit the newborn. So from her pc, she opens the web site of myTaxiService, that is www.mytaxiservice.com, clicks on the "Book" button to rent a taxi, after she has inserted all the needed data, that were name, surname, phone number and address, the system checks the taxis queue of the zone in which there is the address of Ann. Discovering that there is no available taxi in that zone in this specific time, the system searches for an available taxi in the queue of the adjacent zones. After it finds a free taxi in a nearby zone, the system notifies Ann, via SMS, that her reservation has been realized correctly but the taxi will arrive to Ann's address with a little delay. 
+		
+		\subsubsection{Scenario 6}
+		Finally, today, Rossana would have taken the airplane. The flight was booked three days ago, but, because of bad weather, it was been deleted. So, she has accessed to the website of MyTaxiService to modify her reservation. She has used her notebook and then she has gone to the web page, concerning the modification/elimination of reservations. In the dedicated form, she has inserted the code that the system gave her to do this stuff, if she would have needed, but she could do it only until 15 minutes before the stipulated time. So she has postponed the reservation, without any problems.
+		One hour before the meeting with the taxi, she has received a call from her boyfriend Heric, who wasn't really enthusiastic about her decision to go to USA for the Erasmus. When he has known that Rossana hasn't left yet, Heric has decided to give her a ride to the airport. So the girl, for that moment using her smart phone (the computer was in the luggage), has accessed to the mobile application of MyTaxiService to delete definitely her reservation. Going again in the dedicated page and then inserting her code in the specific form (but now choosing the "Elimination"), she has confirmed the cancellation of the reservation. 
 	\newpage
 	\subsection{UML Models}
 		\input{use_case_diagrams}
