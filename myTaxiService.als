@@ -119,7 +119,7 @@ fact TaxiOnlyOneZone{
 //TO ONE BOOKING CORRESPONDS ONLY ONE ADDRESS
 fact BookingOnlyOneAddress{
 	all b: Booking, a, a2: Address | ( b in a.locates and b in a2.locates) implies a=a2
-	all b: Booking | b in Address.locate
+	all b: Booking | b in Address.locates
 }
 
 //A TAXI THAT IS IN A QUEUE IS IN THE ZONE RELATED TO THE QUEUE 
@@ -157,6 +157,7 @@ pred show(){
 #LongReservation > 1
 }
 
+/*
 check  TaxiInOnlyOneQueue
 
 check AddressInOnlyOneZone
@@ -166,5 +167,5 @@ check ExistsCity
 check UsersHaveBookedSomething
 
 check TaxiCanExistsWithoutAQueue
-
-run show for 5
+*/
+run show for 10
