@@ -53,12 +53,12 @@ fact QueueOnlyInOneZone{
 	all q: Queue | one z:Zone| q in z.uses
 }
 
-fact TaxiInOnlyOneQueue{
-	all t: Taxi | one q: Queue | t in q.include
-}
-
 fact TaxiNotAvailable{
 	all s: ShortReservation, t: Taxi, q: Queue | (s in t.rides) implies t not in q.include
+}
+
+fact TaxiAvailable{
+	all s: ShortReservation, t: Taxi, q: Queue | (s not in t.rides) implies t in q.include
 }
 
 fact ShortReservationForOnlyOneUser{
