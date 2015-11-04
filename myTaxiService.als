@@ -21,7 +21,7 @@ sig Queue{
 
 sig User{
 	booksShort: lone ShortReservation,
-	booksLong: set LongReservation	
+	booksLong: set LongReservation,
 }
 
 abstract sig Booking{
@@ -80,10 +80,29 @@ fact TaxiRidesOnlyOneShortReservation{
 	all s, s2: ShortReservation, t: Taxi | (s!=s2 and s in t.rides) implies s2 not in t.rides
 }
 
+fact UserIfBookedSomething{
+	all u: User | (u in booksShort.ShortReservation) or  (u in booksLong.LongReservation)
+}
+
 assert AddressInOnlyOneZone{
 	all a: Address, z, z2: Zone | (a in z.address and a in z2.address) implies z=z2
 }
 
+assert ExistsCity{
+	all z: Zone | (z in City.contains) implies some City
+}
+
+assert  UsersHaveBookedSomething{
+all u: User | (u in booksShort.ShortReservation) or  (u in booksLong.LongReservation)
+}
+
 pred show(){}
 
-run show for 5
+
+//check AddressInOnlyOneZone
+ 
+//check ExistsCity
+
+//check UsersHaveBookedSomething
+
+run show for 5 but 1 ShortReservation
