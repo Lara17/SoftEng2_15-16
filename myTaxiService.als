@@ -15,7 +15,7 @@ sig Address{
 }
 
 sig Queue{
-	include: some Taxi
+	include: set Taxi
 }
 /*
 sig User{
