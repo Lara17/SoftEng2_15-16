@@ -1,6 +1,6 @@
-//********************************************************
-//						ASSERTS
-//********************************************************
+//********************************
+//             ASSERT
+//********************************
 
 //THIS ASSERTION VERIFIES THAT AN ADDRESS BELONGS TO ONLY ONE ZONE
 assert AddressInOnlyOneZone{
