@@ -1,6 +1,6 @@
 \section{Introduction}
 	\subsection{Purpose - Description of the Problem}
-	This document is the Requirement Analysis and Specification Document (RASD) of a system, called myTaxiService, used to manage a taxi service in a city. The main goals of this document are to: describe the system in terms of functional and non-funcional requirements, specify the costrains and how the system will beheave in its application, once that it is deployed with some scenarios in example. This document is meant to be read by the developers of the software to make the point on how it must be developed, but also by the customer, to be sure that all what he asks is well defined and corresponds to what is going to be developed; this document, hence, can be used as a contract between the customer and the developers.
+	This document is the Requirement Analysis and Specification Document (RASD) of a system, called myTaxiService, used to manage a taxi service in a city. The main goals of this document are to: describe the system in terms of functional and non-funcional requirements, specify the constrains and how the system will beheave in its application, once that it is deployed with some scenarios in example. This document is meant to be read by the developers of the software to make the point on how it must be developed, but also by the customer, to be sure that all what he asks is well defined and corresponds to what is going to be developed; this document, hence, can be used as a contract between the customer and the developers.
 		
 	\subsection{Scope}
 	The scope of this system is to manage taxis in a city. A town is divided in zone of 2 square kilometers and, for each zone, the system defines a queue, composed by the identifier, which is the register, of free taxis in that specific zone. A user can require a taxi ride from a zone, but can also book one for another moment, using the web application or the mobile one. About long-term reservations, the user can also modify the date or the hour or both of his/her bookings, and he/she can delete it. 
@@ -9,52 +9,54 @@
 	\begin{itemize}
 		\item \textbf{Users}: users can request a taxi ride or book one, using the mobile app or the website.
 		\item \textbf{Taxi}: taxis work for a taxi company and provide the service to the users by transporting them to their destination.
-		\item \textbf{Taxi not yet registered}: taxis that are not yet registered on the system and do not belong at any queue
+		\item \textbf{Taxi not yet registered}: taxis that are not yet registered on the system and do not belong to any queue.
 	\end{itemize}
 	
 	\subsection{Goals}
 	\begin{itemize}
-		\item Booking a Taxi ride
-		\item Update a long-term reservation
-		\item Delete a long-term reservation
-		\item Locate the Users
-		\item Managing Taxis location
-		\item Managing Taxi queue
-		\item Allow Taxi to register in the system
-		\item Notify the users about their booking changes
-		\item Notify Taxis about new available rides
+		\item Booking a Taxi ride.
+		\item Update a long-term reservation.
+		\item Delete a long-term reservation.
+		\item Locate the Users.
+		\item Managing Taxis location.
+		\item Managing Taxis queue.
+		\item Allow Taxi to register in the system.
+		\item Notify the users about their booking changes.
+		\item Notify Taxis about new available rides.
 	\end{itemize}
 	
 	\subsection{Definitions, acronyms and abbreviations}
 		\subsubsection{Definitions}
 		\begin{itemize}
-			\item myTaxiService: the system described in this document
-			\item User: someone who uses the services offered by myTaxiService, sometimes called also passenger
-			\item Taxi: entity composed by the taxi driver and the taxi car that transports the users
-			\item Booking: generic reservation, that is, it can be long-term reservation or a short-term one
-			\item Short-term reservation: booking, requested from the user, for the current time
-			\item Long-term reservation: booking, requested from the user, characterized or by a time, at least two hours later than the time during that the user requests the service, or by a different day from the current one
-			\item Zone: Part of the city 2 square kilometers large. Zones are disjoint.
-			\item Queue: List of available taxis in a specific zone
+			\item myTaxiService: the system described in this document.
+			\item User: someone who uses the services offered by myTaxiService, sometimes called also passenger.
+			\item Taxi: entity composed by the taxi driver and the taxi car that transports the users.
+			\item Booking: generic reservation, that is, it can be long-term reservation or a short-term one.
+			\item Short-term reservation: booking, requested from the user, for the current time.
+			\item Long-term reservation: booking, requested from the user, characterized or by a time, at least two hours later than the time during that the user requests the service, or by a different day from the current one.
+			\item Zone: part of the city, 2 square kilometers large, that is disjoint with reference to the other zones.
+			\item Queue: list of available taxis in a specific zone.
+			\item Busy Taxi: taxi that is doing a ride.
+			\item Available Taxi: taxi not busy.
 		\end{itemize}
 		\subsubsection{Acronyms}
 		\begin{itemize}
-			\item a
+			\item FIFO: First in, First out.
 		\end{itemize}
 		\subsubsection{Abbreviations}
 		\begin{itemize}
-			\item FIFO: First in, First out
+			\item 
 		\end{itemize}
 	\subsection{Reference Documents}
 	\begin{itemize}
-		\item IEEE Std 830-1998 (Revision of IEEE Std 830-1993) document available on the \url{http://standards.ieee.org/} website
-		\item Assignment 1 from the \emph{Assignment 1 and 2.pdf} file on BeeP university platform
+		\item IEEE Std 830-1998 (Revision of IEEE Std 830-1993) document available on the \url{http://standards.ieee.org/} website.
+		\item Assignment 1 from the \emph{Assignment 1 and 2.pdf} file on BeeP university platform.
 	\end{itemize}
 	\subsection{Overview}
 		Section 2 and 3 of this document provide a syntethic but exhaustive description of the product that will be developed.
 				
-		Specifically section 2 provides a description of the general factors that affect the product and the requirements' background, specifying the product perspective, user characteristics product functions, product constrains, assumptions and dependecies made to write this document.
+		Specifically, section 2 provides a description of the general factors that affect the product and the requirements' background, specifying the product perspective, user characteristics product functions, product constrains, assumptions and dependencies, made to write this document.
 		
-		Section 3 instead focuses on the specific requirements of the product listing all the external, hardware, software and communication interfaces if any, functional and non-functional requirements, the description of \emph{The World and The Machine} graph, listing some scenarios of interest in which the product will operate and other requirements that do not belong to any of the previous category. 
+		Section 3, instead, focuses on the specific requirements of the product listing all the external, hardware, software and communication interfaces if any, functional and non-functional requirements, the description of \emph{The World and The Machine} graph, listing some scenarios of interest in which the product will operate and other requirements that do not belong to any of the previous category. 
 	
 	

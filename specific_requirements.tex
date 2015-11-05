@@ -76,95 +76,102 @@
 		\end{center}
 		
 		\subsubsection{Hardware interfaces}
-		\begin{itemize}
-			\item A machine capable to run a DBMS and a web server software and a PHP interpreter to integrate them
-			\item A machine to run the system
-			\item Network to connect both machines to one's another and to the Internet
-		\end{itemize}
+			There is the necessity to have:
+			\begin{itemize}
+				\item a machine capable to run a DBMS, a web server software and a PHP interpreter to integrate them.
+				\item a machine to run the system.
+				\item network to connect both machines to one's another and to the Internet.
+			\end{itemize}
 		\subsubsection{Software interfaces}
-		\begin{itemize}
-			\item A DBMS to store reserved rides data and identifiers of registered Taxis
-			\item A web server to provide web pages
-			\item A PHP interpreter to integrate the web server and the DBMS
-		\end{itemize}
+			There is the necessity to have:
+			\begin{itemize}
+				\item a DBMS to store reserved rides data and identifiers of registered Taxis.
+				\item a web server to provide web pages.
+				\item a PHP interpreter to integrate the web server and the DBMS.
+			\end{itemize}
 		\subsubsection{Communication interfaces}
-		\begin{itemize}
-			\item a 
-		\end{itemize}
-	\subsection{Functional Requirements}
+			The system will use the API, supplied by the external provider, being able to send SMS, as notifications, to the user. 
+		\subsection{Functional Requirements}
 		\subsubsection{Booking a Taxi ride}
 		\begin{itemize}
-		\item First of all, the system checks the date and the hour of the reservation. 
-		\item In case of long-term reservation:
+			\item First of all, the system checks the date and the hour of the reservation. 
+			\item In case of long-term reservation:
 		\begin{enumerate}
-		\item the system produces an alphanumeric code;
-		\item the system stores this code, with name and surname of the user, in the relative database;
-		\item the system assigns this code to the user.
+			\item the system produces an alphanumeric code;
+			\item the system stores this code, with name and surname of the user, in the relative database;
+			\item the system assigns this code to the user.
 		\end{enumerate}
-		\item In case of short-term reservation:
+			\item In case of short-term reservation:
 		\begin{enumerate}
-		\item the system checks what is the address inserted by the user;
-		\item the system checks in which zone of the city is that address, using the GPS information;
-		\item the system controls the taxis queue of that zone;
-		\item if the taxis queue contains at least the identifier of one taxi, the system sends a notification to the first taxi driver of the queue; when it will receive the confirm, the system tells the user that the reservation is been realized;
-		\item if the taxis queue hasn't got any taxis identifiers, the system checks the queue of the four adjacent zones of that area; the system continues in this way as long as it finds an available taxi; and then it will do the same things of the previous point; when the system will receive the confirm, it tells the user that there will be a delay; if the user decides to accept, the system tells him/her that the reservation is been realized, otherwise not.
+			\item the system checks what is the address inserted by the user;
+			\item the system checks in which zone of the city is that address, using the GPS information;
+			\item the system controls the taxis queue of that zone;
+			\item if the taxis queue contains at least the identifier of one taxi:
+				\begin{itemize}
+					\item the system sends a notification to the first taxi driver of the queue;
+					\item when it will receive the confirm, the system tells the user that the reservation is been realized;
+				\end{itemize}	  
+			\item if the taxis queue hasn't got any taxis identifiers:
+				\begin{itemize}
+					\item the system checks the queue of the four adjacent zones of that area;
+					\item the system continues in this way as long as it finds an available taxi and then it will do the same things of the previous point;
+					\item when the system will receive the confirm, it tells the user that there will be a delay;
+					\item if the user decides to accept, the system tells him/her that the reservation is been realized, otherwise not.
+				\end{itemize}
 		\end{enumerate}
 		\end{itemize}
 		\subsubsection{Update a long-term reservation}
 		\begin{itemize}
-		\item The system receives the alphanumeric code from the user.
-		\item The system checks the DB of the users.
-		\item The system displays the information, collected from the DB, to the user.
-		\item The system receives the modifications.
-		\item The system saves the changed information in the DB.
-		\item The system confirms to the user the modifications.
+			\item The system receives the alphanumeric code from the user.
+			\item The system checks the DB of the users.
+			\item The system displays the information, collected from the DB, to the user.
+			\item The system receives the modifications.
+			\item The system saves the changed information in the DB.
+			\item The system confirms to the user the modifications.
 		\end{itemize}
 		\subsubsection{Delete a long-term reservation}
 		\begin{itemize}
-		\item The system receives the alphanumeric code from the user.
-		\item The system checks the DB of the users.
-		\item The system deletes the found information.
-		\item The system confirms to the user the correct elimination.
+			\item The system receives the alphanumeric code from the user.
+			\item The system checks the DB of the users.
+			\item The system deletes the found information.
+			\item The system confirms to the user the correct elimination.
 		\end{itemize}
 		\subsubsection{Locate the Users}
 		\begin{itemize}
-		\item The system takes the address, inserted by the user.
-		\item The system searches in which zone of the city is that address, using the GPS information.
+			\item The system takes the address, inserted by the user.
+			\item The system searches in which zone of the city is that address, using the GPS information.
 		\end{itemize}		
 		\subsubsection{Managing Taxis location}
 		\begin{itemize}
-		\item The system uses the GPS informations.
-		\item The system locates the position of all the taxis in the city.
-		\item The system saves these information in the database.
+			\item The system uses the GPS informations.
+			\item The system locates the position of all the taxis in the city.
+			\item The system saves these information in the database.
 		\end{itemize}
 		\subsubsection{Managing Taxi queue}
 		\begin{itemize}
-			\item A taxi must be free in order to be inserted in a queue.
-			\item On new rides the system always chose the first taxi in the queue.
-			\item The queue is managed using a FIFO policy.
-			\item Busy taxis are not inserted in any queue.
-			\item Exists only on queue per zone and it's unique.
-			\item A queue contains only taxis of the corresponding zone.
+			\item Only in the case that a taxi is available, the system inserts its identifier in the zone queue, that is unique.
+			\item If there is a new ride, the system chooses the first taxi in the queue, so, using a FIFO policy.
+			\item If there is a new ride, but the interested zone queue is empty, the system checks the queues of the four adjacent zones; the system continues in this way as long as it finds an available taxi.
 		\end{itemize}
 		\subsubsection{Allow Taxi to register in the system}
 		\begin{itemize}
-			\item A taxi must be not already registered to register his identifier.
-			\item After the registration, the taxi is added to the queue related to the actual zone of the taxi.
+			\item The system stores the data inserted by the Taxi Not Yet Registered.
+			\item The system identifies the taxi to assign to the new Taxi.
+			\item The system says to the new Taxi the register of his taxi, letting him to access to myTaxiService application.
 		\end{itemize}
-		\subsubsection{Notify the users about their booking changes}
+		\subsubsection{Notify the users about their booking, their long-term reservation modification or elimination and about possible delays of the taxi}
 		\begin{itemize}
-			\item A user must have requested a taxi ride.
-			\item One user can only receive only notification about his rides.
-			\item The system always notifies the user if the taxi is late or becomes not available.
+			\item After a user's booking, the system sends to him, via SMS, a notification of the occurred booking. 
+			\item After a long-term reservation modification, made by the user, the system sends to him, via SMS, a notification of the occurred modification.
+			\item After a long-term reservation elimination, made by the user, the system sends to him, via SMS, a notification of the occurred elimination.
+			\item After receiving from a Taxi a delay notification, the system sends to the user, via SMS, a notification of the Taxi delay.
 		\end{itemize}
 		\subsubsection{Notify Taxis about new available rides}
 		\begin{itemize}
-			\item A taxi must be registered in the system.
-			\item A taxi must be free to receive a notification.
-			\item A taxi must confirm or decline the new ride.
-			\item A taxi only receives notification about his rides.
+			\item The system sends to the first Taxi in the zone queue a notification of the new ride.
+			\item If the Taxi answers the system with a negative reply, it sends another notification to the next Taxi of the zone queue; the system continues in this way as long as it finds an available taxi. 
 		\end{itemize}
-	\subsection{The World and the Machine}
+		\subsection{The World and the Machine}
 		\begin{center}
 			\includegraphics[width=0.85\textwidth]{./images/ellissi}
 		\end{center}
