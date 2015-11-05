@@ -74,8 +74,6 @@ fact TaxiNotAvailable{
 //IN A TAXI IS AVAILABLE IS IN A QUEUE
 fact TaxiAvailable{
 	all t: Taxi, q: Queue | (t in q.include) implies (no s: ShortReservation  | s in t.rides)
-	//all t: Taxi | (ShortReservation not in t.rides) implies (one q: Queue | t in q.include )
-	//all t: Taxi | t in Queue.include
 }
 
 //ONLY ONE USER CAN BELONG TO A SHORT RESERVATION
@@ -136,20 +134,50 @@ fact LongReservationsHaveNoTaxi{
 //********************************************************
 //						ASSERTS
 //********************************************************
+
+//THIS ASSERTION VERIFIES THAT AN ADDRESS BELONGS TO ONLY ONE ZONE
 assert AddressInOnlyOneZone{
 	all a: Address, z, z2: Zone | (a in z.address and a in z2.address) implies z=z2
 }
 
+//THIS ASSERTION VERIFIES THAT A BOOKING HAS ONLY ONE ADDRESS
+assert BookingOnlyOneAddress{
+	all a, a2: Address | no b: Booking | (b in a.locates and b in a2.locates and a!=a2)
+}
+
+//THIS ASSERTION VERIFIES THAT A CITY MUST EXIST IF THERE ARE ZONES, TAXIS AND QUEUES
 assert ExistsCity{
 	all z: Zone, t: Taxi, q: Queue | ((z in City.contains) implies some City) and ((t in q.include) implies some Queue)
 }
 
+//THIS ASSERTION VERIFIES THAT A USER HAS BOOKED SOMETHING
 assert  UsersHaveBookedSomething{
-all u: User | (u in booksShort.ShortReservation) or  (u in booksLong.LongReservation)
+	all u: User | (u in booksShort.ShortReservation) or  (u in booksLong.LongReservation)
 }
 
+//THIS ASSERTION VERIFIES THAT A TAXI BELONGS TO ONLY ONE QUEUE
 assert TaxiInOnlyOneQueue{
-	all t: Taxi, q , q1: Queue | (t in q.include and t in q1.include) implies q=q1
+	all q , q1: Queue | no t: Taxi | (t in q.include and t in q1.include and q!=q1)
+}
+
+//THIS ASSERTION VERIFIES THAT A TAXI IS LOCATED TO ONLY ONE ZONE
+assert TaxiInOnlyOneZone{
+	all z, z2: Zone | no t: Taxi | (t in z.encloses and t in z2.encloses and z!=z2) 
+}
+
+//THIS ASSERTION VERIFIES THAT A SHORT RESERVATION IS DONE BY ONLY ONE TAXI
+assert ShortReservationForOnlyOneTaxi{
+	all t, t2: Taxi | no s: ShortReservation | (s in t.rides and s in t2.rides and t!=t2)
+}
+
+//THIS ASSERTION VERIFIES THAT A LONG RESERVATION IS BOOKES BY ONLY ONE USER
+assert LongReservationForOnlyOneUser{
+	all u, u2: User | no l: LongReservation | (l in u.booksLong and l in u2.booksLong and u!=u2)
+}
+
+//THIS ASSERTION VERIFIES THAT A SHORT RESERVATION IS BOOKES BY ONLY ONE USER
+assert ShortReservationForOnlyOneUser{
+	all u, u2: User | no s: ShortReservation | (s in u.booksShort and s in u2.booksShort and u!=u2)
 }
 
 pred show(){
@@ -158,14 +186,23 @@ pred show(){
 }
 
 /*
-check  TaxiInOnlyOneQueue
 
 check AddressInOnlyOneZone
  
+check BookingOnlyOneAddress
+
 check ExistsCity
 
 check UsersHaveBookedSomething
 
-check TaxiCanExistsWithoutAQueue
+check TaxiInOnlyOneQueue
+
+check TaxiInOnlyOneZone
+
+check ShortReservationForOnlyOneTaxi
+
+check LongReservationForOnlyOneUser
+
 */
+
 run show for 10
