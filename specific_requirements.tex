@@ -165,9 +165,10 @@
 			\item A taxi only receives notification about his rides.
 		\end{itemize}
 	\subsection{The World and the Machine}
-	\begin{center}
-		\includegraphics[width=0.85\textwidth]{./images/ellissi}
-	\end{center}
+		\begin{center}
+			\includegraphics[width=0.85\textwidth]{./images/ellissi}
+		\end{center}
+		Service request and Taxi status are events that happen in the physical world; the machine then uses the data coming from the world to build a representation of it using taxi queue, taxi location and city zones. The database is only stored in the machine and contains all the data about users to send notification, long term reservations and data about taxis.
 	\subsection{Scenarios}
 		\subsubsection{Scenario 1}
 		Bob has a meeting in Los Angeles the day after tomorrow. Since he hasn't a car, he decides to use myTaxiService and therefore rent a taxi to go to the airport. He grabs his cell phone and, with the mobile application of the service, he books a taxi. The app asks him his name, his surname, his phone number and the address where he wants to wait for the taxi. He inserts all the data requested and, after the server has stored these information in the database, with a SMS, it notifies Bob that the long-term reservation has been realized correctly. 
