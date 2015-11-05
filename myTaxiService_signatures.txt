@@ -1,0 +1,35 @@
+//********************************
+//         SIGNATURES
+//********************************
+sig City{
+	contains: some Zone
+}
+
+sig Zone{
+	address: some Address,
+	uses: one Queue,
+	encloses: some Taxi
+}
+
+sig Address{
+	locates: set Booking
+}
+
+sig Taxi{
+	rides: set Booking
+}
+
+sig Queue{
+	include: set Taxi
+}
+
+sig User{
+	booksShort: lone ShortReservation,
+	booksLong: set LongReservation,
+}
+
+abstract sig Booking{}
+
+sig ShortReservation extends Booking{}
+
+sig LongReservation extends Booking{}
