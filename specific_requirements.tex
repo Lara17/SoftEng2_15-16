@@ -1,15 +1,18 @@
 \section{Specific requirements}
 	\subsection{External interface requirements}
 		\subsubsection{User Interfaces: Web Page}
+		In this section is presented a minimal mock-up of the web and mobile interfaces on both users and taxis side. 
+		
+		These have to be considered as an example of what at least is needed in the interface and don't are final version of the product.
 		\paragraph{Index}
 		\begin{center}
 			\includegraphics[width=0.90\textwidth]{./images/index}
 		\end{center}
-		\paragraph{Check Reservation}
+		\paragraph{Book a Taxi}
 		\begin{center}
 			\includegraphics[width=0.90\textwidth]{./images/check_reservation}
 		\end{center}
-		\paragraph{Modify/Delete Reservation}
+		\paragraph{View/Modify/Delete a Long Term Reservation}
 		\begin{center}
 			\includegraphics[width=0.90\textwidth]{./images/modify_delete_reservation}
 		\end{center}
@@ -139,13 +142,13 @@
 		\subsubsection{Locate the Users}
 		\begin{itemize}
 			\item The system takes the address, inserted by the user.
-			\item The system searches in which zone of the city is that address, using the GPS information.
+			\item The system searches in which zone of the city is that address.
 		\end{itemize}		
 		\subsubsection{Managing Taxis location}
 		\begin{itemize}
 			\item The system uses the GPS informations.
 			\item The system locates the position of all the taxis in the city.
-			\item The system saves these information in the database.
+			\item The system saves these information in the database and updates them every 2 minutes.
 		\end{itemize}
 		\subsubsection{Managing Taxi queue}
 		\begin{itemize}
