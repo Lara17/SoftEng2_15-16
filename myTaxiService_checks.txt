@@ -1,0 +1,25 @@
+//********************************
+//     CHECKS AND PREDS
+//********************************
+pred show(){
+#ShortReservation > 1
+#LongReservation > 1
+}
+
+check AddressInOnlyOneZone
+ 
+check BookingOnlyOneAddress
+
+check ExistsCity
+
+check UsersHaveBookedSomething
+
+check TaxiInOnlyOneQueue
+
+check TaxiInOnlyOneZone
+
+check ShortReservationForOnlyOneTaxi
+
+check LongReservationForOnlyOneUser
+
+run show for 10
