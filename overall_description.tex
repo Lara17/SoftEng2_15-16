@@ -5,7 +5,7 @@
 		
 		This system is a stand alone system, but it can be extended using the featured API.
 		
-		In the case of web application, a user must have a computer to access the service site. It's necessary also a browser to allow navigation.
+		In the case of web application, a user must have a computer to access the service site. It's necessary also a browser to allow navigation. On the user side the application is not a heavy one so doesn't require any particular hardware.
 		Using the site, users can update himself/herself about this service and, then he/she can book a taxi, for a short-term reservation or a long-term one. After that, he/she can modify his/her reservation or delete it. In addition of these actions, the user can view his/her reservation and he/she can view the system notifications.
 		
 		In the case of mobile application, a user must have a smart phone with an Internet connection to access to the service app. It's necessary that the cell phone has got sufficient memory to allow the installation of this app, that is compatible with all of the OSs (i.e. Android, iOS and Windows Phone).
@@ -13,7 +13,7 @@
 		
 		The taxi driver, through the mobile application, can view some information about the current ride, the notifications from the system, previous rides. Then the taxi driver can send to the system notifications about delays that will be forwarded to the user by the system.
 	\subsection{Product functions}
-		\paragraph{User side}The system allows the users to book a taxi using the website or the mobile application installed on their smart phones. They also can reserve a taxi but they must do it at least 2 hours before the chosen hour; in this case the system assigns a unique code for every reservation in order to allow users to modify or delete their reservation. The system also sends notification to the users about the status of their bookings and reservation or informations about waiting time for their ride.
+		\paragraph{User side}The system allows the users to book a taxi using the website or the mobile application installed on their smart phones. They also can reserve a taxi but they must do it at least 2 hours before the chosen hour; in this case the system assigns a unique code for every reservation in order to allow users to modify or delete their reservation. The system also sends notification to the users about the status of their bookings and reservation or information about waiting time for their ride.
 		\paragraph{Taxi side}The system allows taxi to register into it in order to be added to the queue and be given new passengers. The system also sends notification to taxis about new jobs. It also allows taxis to notify users the system about delays.
 	\subsection{User characteristics}
     The users that intend to use the product are people that want to travel using taxis service. They should know how to use a web browser or a smarthphone in order to use the web application or the mobile app. 
@@ -26,9 +26,9 @@
 	    \end{itemize}
 	\subsection{Assumptions}
 	    \begin{itemize}
-	    \item The terms "code" and "identifier" relate to the same thing, that is the register of the taxi.
+	    \item The terms "code" and "identifier" relate to the same thing, that is the taxi plate.
 	    \item The fair queue management is characterized by: at most 10 minutes of wait; a FIFO method to organize the taxis queue.
-	    \item The zones in which the city is divided are always the same, don't change posistion and they never overlap.
+	    \item The zones in which the city is divided are always the same, don't change position and they never overlap.
 	    \item The taxis that are outside of the city or aren't in any defined zone are considered busy until they return in a known zone.
 	    \item The taxis that don't answer to the system notifications of new incoming rides are considered as busy.
 	    \item The GPS works always, pooled every 2 minutes.
