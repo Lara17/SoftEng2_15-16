@@ -33,8 +33,6 @@ fact TaxiNotAvailable{
 //IN A TAXI IS AVAILABLE IS IN A QUEUE
 fact TaxiAvailable{
 	all t: Taxi, q: Queue | (t in q.include) implies (no s: ShortReservation  | s in t.rides)
-	//all t: Taxi | (ShortReservation not in t.rides) implies (one q: Queue | t in q.include )
-	//all t: Taxi | t in Queue.include
 }
 
 //ONLY ONE USER CAN BELONG TO A SHORT RESERVATION
