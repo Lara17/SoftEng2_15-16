@@ -3,16 +3,17 @@
 	This document is the Requirement Analysis and Specification Document (RASD) of a system, called myTaxiService, used to manage a taxi service in a city. The main goals of this document are to: describe the system in terms of functional and non-funcional requirements, specify the constrains and how the system will beheave in its application, once that it is deployed with some scenarios in example. This document is meant to be read by the developers of the software to make the point on how it must be developed, but also by the customer, to be sure that all what he asks is well defined and corresponds to what is going to be developed; this document, hence, can be used as a contract between the customer and the developers.
 		
 	\subsection{Scope}
-	The scope of this system is to manage taxis in a city. A town is divided in zone of 2 square kilometers and, for each zone, the system defines a queue, composed by the identifier, which is the plate, of free taxis in that specific zone. A user can require a taxi ride from a zone, but can also book one for another moment, using the web application or the mobile one. About long-term reservations, the user can also, after have created one, modify the date or the hour or both of his/her booking, and he/she can delete it. 
+	The scope of this system is to manage taxis in a city. A town is divided in zone of 2 square kilometers and, for each zone, the system defines a queue, composed by the identifier, which is the vehicle plate, of free taxis in that specific zone. A user can require a taxi ride from a zone, but can also book one for another moment, using the web application or the mobile one. About long-term reservations, the user can also, after have created one, modify the date or the hour or both of his/her booking, and he/she can delete it. 
 	
 	\subsection{Actors}
 	\begin{itemize}
 		\item \textbf{Users}: users can request a taxi ride or book one, using the mobile app or the website.
-		\item \textbf{Taxi}: taxis work for a taxi company and provide the service to the users by transporting them to their destination; it is composed by the taxi driver and the taxi car.
+		\item \textbf{Taxi}: taxis work for a taxi company and provide the service to the users by transporting them to their destination; it is an entity, composed by the taxi driver and the car.
 		\item \textbf{Taxi not yet registered}: taxis that are not yet registered on the system and do not belong to any queue.
 	\end{itemize}
 	
 	\subsection{Goals}
+	The software has to be able to:
 	\begin{itemize}
 		\item Booking a Taxi ride.
 		\item Update a long-term reservation.
