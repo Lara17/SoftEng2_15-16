@@ -1,4 +1,4 @@
-<img src="images/logo-full.jpg" alt="myTaxiService" width="300" />
+<img src="rasd/images/logo-full.jpg" alt="myTaxiService" width="300" />
 
 This repository contains the documentation for the development of **myTaxiService** software, as part of Software Engineering 2 project @ Politecnico di Milano.
 
