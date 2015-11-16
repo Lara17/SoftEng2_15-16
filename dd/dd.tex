@@ -1,0 +1,33 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[hidelinks]{hyperref}
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage{titlesec}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\setcounter{secnumdepth}{5}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\hyphenation{my-Ta-xi-Ser-vi-ce}
+
+\begin{document}
+	\include{title}
+	\tableofcontents
+	\newpage
+	\include{introduction}
+	\include{architectural_design}
+	\include{algorithm_design}
+	\include{user_interface_design}
+	\include{req_traceability}
+	
+	\section{References}
+	
+\end{document}
