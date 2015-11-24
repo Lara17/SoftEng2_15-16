@@ -1,8 +1,19 @@
 \section{Architectural Design}
 \subsection{Overview}
-The main architecture chosen for this system is the client-server one. and the web server can be accessed through smartphone and computer.
+	The main architecture chosen for this system is the client-server one; clients access the service trough the web server that is only the view of the system. 
+	
+	All services are inside the application server that expose all the APIs needed to expand the system in the future.
+	
+	All the data is stored inside a database that is on another machine.
 
+	This modular schema helps the system maintainability because every component is independent from the other and can be substituted without replacing other parts. 
 \subsection{High level components and their interaction}
+	Starting from the user or taxi every request is made to the web server that can serve all the static pages which contain only the basic structure and the graphics of the website. Every type of user can access only his interface:
+	\begin{itemize} 
+		\item taxis can access their interfaces to manage their rides 
+		\item users can access only the reservation interfaces where they can make a new reservation or modify or delete one.
+	\end{itemize}
+	To populate all the pages with the needed data the web server needs to ask the application server.
 \subsection{Component view}
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{./images/component_view.png}
