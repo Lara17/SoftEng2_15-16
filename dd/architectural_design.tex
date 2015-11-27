@@ -58,6 +58,12 @@
 			\includegraphics[width=0.85\textwidth]{./images/Long_Term_Reservation_Complete.png}
 		\end{center}
 \subsection{Component interfaces}
+	Every part of the system provide a specific interface to interact with the other parts; in particular the system has:
+	\begin{itemize}
+		\item \textbf{Website Interface:} This interface is used by the clients in order to display the web pages provided by the web server
+		\item \textbf{Application Server Interfaces:} These interfaces are used by the web server to query the application server for the data that is needed in the web pages. Every manager in the application server has it's own interface in order to keep as much modular as possible the application server in order to make it easier to scale up it with more services.
+		\item \textbf{Database Interface:} This interface provided by the database allow to query or modify the database by the application server. Since this is the only interface provided by the database, only the application server can access it providing data security. 
+	\end{itemize}
 \subsection{Selected architectural styles and patterns}
 \subsection{Other design decisions}
 	\subsubsection{Design patterns}
