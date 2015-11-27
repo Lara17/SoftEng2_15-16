@@ -66,15 +66,16 @@
 		\item \textbf{Application Programming Interfaces:} This interfaces allow the system to be upgraded and expanded with new functionalities.
 	\end{itemize}
 \subsection{Selected architectural styles and patterns}
-	\begin{wrapfigure}{r}{0.2\textwidth}
-		\vspace{-30pt}
-		\begin{center}	
-			\includegraphics[width=0.18\textwidth]{./images/architecture.png}
-		\end{center}
-	\end{wrapfigure}
 	The system is organized with a Client-Server architecture, but the application server is divided in several managers which manage every service. 
 	
-	The GUI part of the system are the cellphones and the website that allow the users and the taxis to access the system through the internet network. 
-\newpage
+	The GUI part of the system are the cellphones and the website that allow the users and the taxis to access the system through the internet network.
+	
+	The figure on the left shows a system that has the application server and the database in the same place and don't needs any network connection between them; the figure on the right instead shows how the system can be distributed and can be scaled more easily.
+	\begin{center}
+		\begin{tabular}{>{\centering}m{5cm}|>{\centering}m{5cm}}
+			\includegraphics[width=0.10\textwidth]{./images/architecture1.png} & 	
+			\includegraphics[width=0.10\textwidth]{./images/architecture2.png}  \\ 
+		\end{tabular} 
+	\end{center}	  	
 \subsection{Other design decisions}
 	\subsubsection{Design patterns}
