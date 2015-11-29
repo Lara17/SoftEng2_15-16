@@ -72,10 +72,14 @@
 	
 	The figure on the left shows a system that has the application server and the database in the same place and it don't need any network connection between them. The figure on the right instead shows how the system can be distributed and it can be scaled more easily.
 	\begin{center}
-		\begin{tabular}{>{\centering}m{5cm}|>{\centering}m{5cm}}
-			\includegraphics[width=0.10\textwidth]{./images/architecture1.png} & 	
-			\includegraphics[width=0.10\textwidth]{./images/architecture2.png}  \\ 
-		\end{tabular} 
+	    \begingroup
+	    	\setlength{\tabcolsep}{30pt}
+		    	\begin{tabular}{ c | c }
+			    	\includegraphics[width=0.10\textwidth]{./images/architecture1.png} & 	
+			    	\includegraphics[width=0.10\textwidth]{./images/architecture2.png}  \\ 
+		    	\end{tabular} 
+	    	\end{center}
+		\endgroup
 	\end{center}	  	
 \subsection{Other design decisions}
 	\subsubsection{Design patterns}
