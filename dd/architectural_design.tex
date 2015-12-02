@@ -11,11 +11,11 @@
 	Starting from the user or taxi, every request is made to the web server that can serve all the static pages which contain only the basic structure and the graphics of the website. Every type of user can access only his interface:
 	\begin{itemize} 
 		\item taxis can access their interfaces to manage their rides 
-		\item users can access only the reservation interfaces where they can make a new reservation or modify/delete one.
+		\item users can access only the booking interfaces where they can make a new reservation or modify/delete a long term reservation.
 	\end{itemize}
 	To populate all the pages with the needed data, the web server needs to ask the application server.
 	
-	The application server receives and elaborates the request: if there is the necessity, it will query the database server to retrieve or save the needed data for the request.
+	The application server receives and elaborates the request: if there is the urge, it will query the database server to retrieve or save the needed data for the request.
 	
 	The database server stores all the data received from the application server and it waits for queries.
 \subsection{Component view}
