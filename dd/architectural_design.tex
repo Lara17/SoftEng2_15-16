@@ -67,17 +67,13 @@
 \subsection{Selected architectural styles and patterns}
 	The system is organized with a Client-Server architecture, but the application server is divided in several managers which manage every service. 
 	
-	The GUI part of the system are the cellphones and the website that allow the users and the taxis to access the system through the internet network.
+	The GUI part of the system is the website that allows the users and the taxis to access the system through the internet network using a browser or the smartphone application.
 	
-	The figure on the left shows a system that has the application server and the database in the same place and it don't need any network connection between them. The figure on the right instead shows how the system can be distributed and it can be scaled more easily.
-	\begin{center}
-	    \begingroup
-	    	\setlength{\tabcolsep}{30pt}
-		    	\begin{tabular}{ c | c }
-			    	\includegraphics[width=0.10\textwidth]{./images/architecture1.png} & 	
-			    	\includegraphics[width=0.10\textwidth]{./images/architecture2.png}  \\ 
-		    	\end{tabular} 
-		\endgroup
+	To ensure the maximum possible scalability and expandability the system is organized in a 3-tiered architecture. Using such architecture makes also the system more maintainable because every part is independent from the other and it can be substituted with no downtime.
+	
+	Every part can also be replicated one or more times to increase availability of the entire system guaranteeing more uptime.
+	\begin{center}	
+	    	\includegraphics[width=0.10\textwidth]{./images/architecture2.png}
 	\end{center}	  	
 \subsection{Other design decisions}
 	\subsubsection{Design patterns}
