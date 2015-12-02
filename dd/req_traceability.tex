@@ -2,7 +2,7 @@
 The list above shows how the goals, defined in the RASD, are mapped into the design elements, that we have defined in the upper sections of this document.
 \newline
 \newline
-	\subsection \emph{G1}
+	\subsection {\emph{G1}}
 		\begin{itemize}
 			\item Using the smartphone or the computer, the user clicks on the button, that lets him/her to book a ride.
 			\item The web server loads the web page "booking.html".
@@ -11,7 +11,7 @@ The list above shows how the goals, defined in the RASD, are mapped into the des
 			\item The application server, using the reservation manager and thanks to the TCP/IP protocol, executes an SQL query with the user's information to the DBMS.
 			\item The DBMS saves these information in the specific table "User Reservation Info".
 		\end{itemize}
-	\subsection \emph{G2}
+	\subsection {\emph{G2}}
 		\begin{itemize}
 			\item Using the smartphone or the computer, the user clicks on the button, that lets him/her to modify the date and/or the hour of his/her long-term reservation.
 			\item The web server loads the web page "long reservation modification.html".
@@ -20,7 +20,7 @@ The list above shows how the goals, defined in the RASD, are mapped into the des
 			\item The application server, using the reservation manager and thanks to the TCP/IP protocol, executes an SQL query with the user's information to the DBMS.
 			\item The DBMS changes the old information with the new ones, in the specific table "User Reservation Info".
 		\end{itemize}
-	\subsection \emph{G3}
+	\subsection {\emph{G3}}
 		\begin{itemize}
 			\item Using the smartphone or the computer, the user clicks on the button, that lets him/her to delete a long-term reservation.
 			\item The web server loads the web page "long reservation deletion.html".
@@ -29,17 +29,17 @@ The list above shows how the goals, defined in the RASD, are mapped into the des
 			\item The application server, using the reservation manager and thanks to the TCP/IP protocol, executes an SQL query with the user' alphanumeric code to the DBMS.
 			\item The DBMS deletes the long-term reservation information from the specific table "User Reservation Info".
 		\end{itemize}
-	\subsection \emph{G4}
+	\subsection {\emph{G4}}
 		\begin{itemize}
 			\item Before to accept the user's request for a booking, the application system uses the location manager.
 			\item The application server, in this way, thanks to the GPS information, can check if the address, inserted by the user, is valid or not.
 		\end{itemize}
-	\subsection \emph{G5}
+	\subsection {\emph{G5}}
 		\begin{itemize}
 			\item The application server uses the location manager.
 			\item In this way, the application server, thanks to the GPS information, identifies the current position of the taxi.
 		\end{itemize}
-	\subsection \emph{G6}
+	\subsection {\emph{G6}}
 		\begin{itemize}
 			\item After the identification of the taxi position, the application server uses the queue manager to understand which is the queue relative to the zone where there is the taxi in this moment.
 			\item The application server inserts the taxi identifier, that is the vehicle plate, in this zone's queue, if the taxi is free.
@@ -47,7 +47,7 @@ The list above shows how the goals, defined in the RASD, are mapped into the des
 			\item The application server assigns to the first taxi in the queue the request of a user, if he/she has requested a taxi in this zone.
 			\item If the zone's queue is empty, the application server, through the location manager, checks which four zones are adjacent of the requested zone. Then, the application server does the same things, already described previously.
 		\end{itemize}
-	\subsection \emph{G7}
+	\subsection {\emph{G7}}
 		\begin{itemize}
 			\item Using the smartphone, the new taxi clicks on the button, that lets him/her to register in the system.
 			\item The web server loads the web page "registration.html".
@@ -56,11 +56,11 @@ The list above shows how the goals, defined in the RASD, are mapped into the des
 			\item The application server, using the taxi registration manager and thanks to the TCP/IP protocol, executes an SQL query with the new taxi's information to the DBMS.
 			\item The DBMS inserts these information in the specific table "Taxi List".
 		\end{itemize}
-	\subsection \emph{G8}
+	\subsection {\emph{G8}}
 		\begin{itemize}
 			\item The application server, using the notification manager, sends an SMS, after the user changed his/her long-term reservations.
 		\end{itemize}
-	\subsection \emph{G9}
+	\subsection {\emph{G9}}
 		\begin{itemize}
 			\item The application server uses the location manager and, thanks to the GPS information, it identifies the position of the user.
 			\item The application server sends a notification to the first taxi available in the queue of the zone, from where the user has requested a taxi.
