@@ -1,1 +1,12 @@
 \section{Algorithm Design}
+\begin{algorithmic}
+	\Function{manageQueue}{zone}
+		\State $queue\gets getZoneQueue(zone)$
+		\While{queueIsEmpty}
+				\State $adjacentZone \gets getAdjacentZone(zone)$
+				\State $queue\gets getZoneQueue(adjacentZone)$
+		\EndWhile
+		\State $taxiCode \gets getTaxi(queue)$
+		\State \Return{$taxiCode$}
+	\EndFunction
+\end{algorithmic}
