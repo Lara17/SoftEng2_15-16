@@ -73,7 +73,7 @@
 		 \item The user clicks on the "Confirm" button.
 		 \item If the date is the actual one, the system checks if the current time is at least two hours before the long-term reservation time.
 		 \item The system inserts the data of the user in the database.
-		 \item The system sends a confirmation of the long-term reservation via SMS to the user.
+		  \item The system sends a confirmation of the long-term reservation via SMS to the user, with an alphanumeric code, that the user can use to modify and/or delete this long-term reservation.
 		 \item Ten minutes before the meeting time with the user, the system searches in the taxis queue of that area the first available taxi.
 		 \item The system sends a notification to that taxi.
 		 \item If the taxi accepts the service, the system sends a confirmation to the user.
@@ -315,6 +315,25 @@
 		 \begin{enumerate}
 		 \item The taxi clicks on "View history";
 		 \item the system loads from the database the information of all the previous rides.
+		 \end{enumerate}
+		 } \\ \hline
+		 \textbf{Exit Condition} & No exit conditions \\ \hline
+		 \textbf{Exceptions} & No exceptions.
+		\end{tabular}
+		
+		\subparagraph{Where is the user?}
+		~\\[0.2cm]
+		\vspace{20pt}
+		\noindent
+		\begin{tabular}{l l}
+		 \textbf {Name} & Where is the user?  \\ \hline
+		 \textbf{Actors} & Taxi \\ \hline
+		 \textbf{Entry conditions} & Login successful \\ \hline
+		 \textbf{Event flow} & 
+		 \parbox{0.7\textwidth}{
+		 \begin{enumerate}
+		 \item The taxi clicks on the button "Where is the user?";
+		 \item the system sends an SMS to the user to tell him/her that the taxi is arrived.
 		 \end{enumerate}
 		 } \\ \hline
 		 \textbf{Exit Condition} & No exit conditions \\ \hline
