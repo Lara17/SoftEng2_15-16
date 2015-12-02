@@ -1,4 +1,5 @@
 \section{Algorithm Design}
+\subsection{Queue manager}
 \begin{algorithmic}
 	\Function{manageQueue}{zone}
 		\State $queue\gets getZoneQueue(zone)$
@@ -8,5 +9,27 @@
 		\EndWhile
 		\State $taxiCode \gets getTaxi(queue)$
 		\State \Return{$taxiCode$}
+	\EndFunction
+\end{algorithmic}
+\subsection{Reservation Manager}
+\begin{algorithmic}
+	\Function{manageBooking}{location, time, destination}
+		\If {$!locationIsValid(location)  \&\& !timeIsValid(time)$} 
+			\State \Return error 
+		\EndIf
+		\If{$time = CURRENT \textunderscore TIME$}
+			\State $reservation \gets createShortReservation(location, destination)$
+			\State $zone \gets getZone(location)$
+			\While{!positiveResponse}
+				\State $taxi \gets manageQueue(zone)$
+				\State $response \gets jobNotification(taxi)$
+			\EndWhile	
+		\Else 
+			\State $reservation \gets createLongReservation(location, time, destination)$
+			\State $saveReservation(reservation, database)$
+			\State \Return
+		\EndIf
+		\State $sendConfirmation(reservation)$
+		\State \Return
 	\EndFunction
 \end{algorithmic}
