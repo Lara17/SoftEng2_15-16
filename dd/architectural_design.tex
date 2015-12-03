@@ -6,16 +6,14 @@
 	
 	All the data is stored inside a database that is on another machine.
 
-	This modular schema helps the system maintainability because every component is independent from the other and they can be substituted without replacing other parts. 
+	This modular schema helps the system' maintainability because every component is independent from the other and they can be substituted without replacing other parts. 
 \subsection{High level components and their interaction}
-	Starting from the user or taxi, every request is made to the web server that can serve all the static pages which contain only the basic structure and the graphics of the website. Every type of user can access only his interface:
+	Starting from the user or from the taxi, every request is made to the web server that can serve all the static pages which contain only the basic structure and the graphics of the website. There are two types of interfaces:
 	\begin{itemize} 
-		\item taxis can access their interfaces to manage their rides 
-		\item users can access only the booking interfaces where they can make a new reservation or modify/delete a long term reservation.
+		\item taxis can access to their interfaces to manage their rides 
+		\item users can access only to the booking interfaces, where they can make a new booking or modify/delete a long-term reservation.
 	\end{itemize}
-	To populate all the pages with the needed data, the web server needs to ask the application server.
-	
-	The application server receives and elaborates the request: if there is the urge, it will query the database server to retrieve or save the needed data for the request.
+	To populate all the pages with the needed data, the web server needs to ask the application server, that receives and elaborates the request: if there is the urge, it will query the database server to retrieve or save the needed data for the request.
 	
 	The database server stores all the data received from the application server and it waits for queries.
 \subsection{Component view}
@@ -23,13 +21,13 @@
 		\includegraphics[width=0.95\textwidth]{./images/component_view.png}
 	\end{center}
 	
-	In the above diagram, through the Internet, using a web browser or, in alternative, a smartphone, users can access to their interfaces, that are about the booking, the modification of the long-term reservation, the long-term reservation information, the service information and the elimination of the long-term reservation. 
+	In the above diagram, through the Internet, using a web browser or, in alternative, a smartphone, users can access to their interfaces, that are about the booking, the modification of the long-term reservation, the long-term reservation' information, the service' information and the elimination of the long-term reservation. 
 	
 	In the case of taxis, through the Internet, only using a smartphone, they can access to their interfaces, that are about the registration, the history of the rides, the login, the notifications of delay and the information about the current ride.
 	
 	These interfaces are populated with data, coming from the application server. This is composed of some services that manage the reservations, the queues of taxis, the locations of the users, the taxis' authentication, the taxis' registration and finally the delay' notifications.
 	
-	The application server is the only component that can access to the DBMS, which is characterized by three data tables: the history of the reservations, the users' reservations and the taxis' list.
+	The application server is the only component that can access to the DBMS, which is characterized by three data' tables: the history of the reservations, the users' reservations and the taxis' list.
 \subsection{Deployment view}
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{./images/deployment_view.png}
@@ -59,19 +57,19 @@
 \subsection{Component interfaces}
 	Every part of the system provides a specific interface to interact with the other parts; in particular the system has:
 	\begin{itemize}
-		\item \textbf{Website Interface:} This interface is used by the clients in order to display the web pages provided by the web server.
-		\item \textbf{Application Server Interfaces:} These interfaces are used by the web server to query the application server for the data that is needed in the web pages. Every manager in the application server has its own interface in order to keep, as much modular as possible, the application server in order to make it easier, to scale up it with more services.
-		\item \textbf{Database Interface:} This interface provided by the database allows to query or modify the database by the application server. Since this is the only interface provided by the database, only the application server can access it, providing data security.
-		\item \textbf{Application Programming Interfaces:} These interfaces allow the system to be upgraded and expanded with new functionalities.
+		\item \textbf{Website Interface:} this interface is used by the clients in order to display the web pages provided by the web server.
+		\item \textbf{Application Server Interfaces:} these interfaces are used by the web server to query the application server for the data that is needed in the web pages. Every manager in the application server has its own interface in order to keep, as much modular as possible, the application server in order to make it easier and to scale up it with more services.
+		\item \textbf{Database Interface:} this interface, provided by the database, allows to query or modify the database by the application server. Since this is the only interface provided by the database, only the application server can access it, providing data security.
+		\item \textbf{Application Programming Interfaces:} these interfaces allow the system to be upgraded and expanded with new functionalities.
 	\end{itemize}
 \subsection{Selected architectural styles and patterns}
 	The system is organized with a Client-Server architecture, but the application server is divided in several managers which manage every service. 
 	
-	The GUI part of the system is the website that allows the users and the taxis to access the system through the internet network using a browser or the smartphone application.
+	The GUI part of the system is the website that allows the users and the taxis to access the system through the internet network using a browser or the mobile application.
 	
-	To ensure the maximum possible scalability and expandability the system is organized in a 3-tiered architecture. Using such architecture makes also the system more maintainable because every part is independent from the other and it can be substituted with no downtime.
+	To ensure the maximum possible scalability and expandability, the system is organized in a 3-tiered architecture. Using such architecture makes also the system more maintainable because every part is independent from the other and it can be substituted with no downtime.
 	
-	Every part can also be replicated one or more times to increase availability of the entire system guaranteeing more uptime.
+	Every part can also be replicated one or more times to increase availability of the entire system, guaranteeing more uptime.
 	\begin{center}	
 	    	\includegraphics[width=0.10\textwidth]{./images/architecture2.png}
 	\end{center}	  	
@@ -79,7 +77,7 @@
 	\subsubsection{Design patterns}
 	Taking into account the Controller part of this system, we have thought to use three design patterns:
 		\begin{itemize}
-			\item \textbf{Singleton:} it can be used with reference to the three tables of the DBMS, that are "Reservation History", "User Reservations Info" and "Taxi List".
+			\item \textbf{Singleton:} it can be used with reference to the three tables of the DBMS, that are "Bookings History", "User Bookings Info" and "Taxi List".
 			\item \textbf{Strategy:} it can be used with reference to the two different bookings, that are the short-term reservation and the long-term one.
 			\item \textbf{Observer/Observable:} in this system, we can consider the "City" as the Observable and the Observers are all the classes, from the View and the Controller, that must be notified about the changes of the Observable element.
 		\end{itemize}
