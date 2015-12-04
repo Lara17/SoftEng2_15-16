@@ -23,14 +23,14 @@ The list below shows how the goals, defined in the RASD, are mapped into the des
 			\item Using the smartphone or the computer, the user clicks on the button, that lets him/her to delete a long-term reservation.
 			\item The web server loads the web page "long reservation deletion.html".
 			\item The user can view the long-term reservation delete interface and he/she can ask to cancel his/her ride.
-			\item Through the TCP/IP protocol, the web server sends the the alphanumeric code, inserted by the user, to the application server.
-			\item The application server, using the reservation manager and thanks to the TCP/IP protocol, executes an SQL query with the user' alphanumeric code to the DBMS.
+			\item Through the TCP/IP protocol, the web server sends the alphanumeric code, inserted by the user, to the application server.
+			\item The application server, using the reservation manager and thanks to the TCP/IP protocol, executes an SQL query with the user's alphanumeric code to the DBMS.
 			\item The DBMS deletes the long-term reservation information from the specific table "User Bookings Info".
 		\end{itemize}
 	\subsection {\emph{G4}}
 		\begin{itemize}
 			\item Before to accept the user's request for a booking, the application system uses the location manager.
-			\item The application server, in this way, thanks to the GPS information, can check if the origin' address, inserted by the user, is valid or not.
+			\item The application server, in this way, thanks to the GPS information, can check if the origin address, inserted by the user, is valid or not.
 		\end{itemize}
 	\subsection {\emph{G5}}
 		\begin{itemize}
@@ -40,10 +40,10 @@ The list below shows how the goals, defined in the RASD, are mapped into the des
 	\subsection {\emph{G6}}
 		\begin{itemize}
 			\item After the identification of the taxi position, the application server uses the queue manager to understand which is the queue relative to the zone where there is the taxi in that moment.
-			\item The application server inserts the taxi identifier, that is the vehicle plate, in this zone's queue, if the taxi is free.
-			\item The application server deletes the taxi identifier, that is the vehicle plate, from this zone's queue, if the taxi is not yet available.
+			\item The application server inserts the taxi identifier, that is the vehicle plate, in this zone queue, if the taxi is free.
+			\item The application server deletes the taxi identifier, that is the vehicle plate, from this zone queue, if the taxi is not yet available.
 			\item The application server assigns to the first taxi in the queue the request of a user, if he/she has requested a taxi in this zone.
-			\item If the zone' queue is empty, the application server, through the location manager, checks which four zones are adjacent of the requested zone. Then, the application server does the same things, already described previously.
+			\item If the zone queue is empty, the application server, through the location manager, checks which four zones are adjacent of the requested zone. Then, the application server does the same things, already described previously.
 		\end{itemize}
 	\subsection {\emph{G7}}
 		\begin{itemize}
@@ -56,7 +56,7 @@ The list below shows how the goals, defined in the RASD, are mapped into the des
 		\end{itemize}
 	\subsection {\emph{G8}}
 		\begin{itemize}
-			\item The application server, using the notification manager, sends an SMS, after the user changed his/her long-term reservations.
+			\item The application server, using the notification manager, sends an SMS, after the user changed his/her long-term reservation.
 		\end{itemize}
 	\subsection {\emph{G9}}
 		\begin{itemize}
