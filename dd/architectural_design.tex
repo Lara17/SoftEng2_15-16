@@ -25,7 +25,7 @@
 	
 	In the case of taxis, through the Internet, only using a smartphone, they can access to their interfaces, that are about the registration, the history of the rides, the login, the notifications of delay and the information about the current ride.
 	
-	These interfaces are populated with data, coming from the application server. This is composed of some services that manage the reservations, the queues of taxis, the locations of the users, the taxis' authentication, the taxis' registration and finally the delay' notifications.
+	These interfaces are populated with data, coming from the application server. This is composed of some services that manage the reservations, the queues of taxis, the locations of users and taxis (in the case of users, this manager checks also the validity of the time inserted), the taxis' authentication, the taxis' registration and finally the delay' notifications.
 	
 	The application server is the only component that can access to the DBMS, which is characterized by three data' tables: the history of the reservations, the users' reservations and the taxis' list.
 \subsection{Deployment view}
