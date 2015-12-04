@@ -50,6 +50,7 @@ The above pseudo code describes how the Booking Manager organizes the bookings.
 First of all, the function "manageBooking" checks if the origin address and/or the time, inserted by the user, is/are valid or not: in the worst case, there will occur an error. 
 Otherwise, if the time is the current one, in the variable "booking", there will be saved a short-term reservation, which will be the return of the function "createShortTermReservation". In the variable "zone", this function will save the zone in which there is the origin address specified by the user. 
 In the while cycle, that will occur as long as the taxi response will not be positive, thanks to the functions "manageQueue" and "rideNotification", a taxi will be chosen to do the ride. 
+
 If the time is not the current one, in the variable "booking", there will be saved a long-term reservation, which will be the return of the function "createLongTermReservation".
 Then, the information about the booking reserved will be saved in the database, through the function "saveBooking".
 Finally, a confirmation of the booking realized correctly will be send to the user.
