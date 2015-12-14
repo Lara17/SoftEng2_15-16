@@ -36,10 +36,10 @@ In this way, the first taxi of the considered queue will be saved in the variabl
 			\EndWhile	
 		\Else 
 			\State $booking \gets createLongTermReservation(origin, time, destination)$
-			\State $saveBooking(reservation, database)$
+			\State $saveBooking(booking, database)$
 			\State \Return
 		\EndIf
-		\State $sendConfirmation(reservation)$
+		\State $sendConfirmation(booking)$
 		\State \Return
 	\EndFunction
 \end{algorithmic}
