@@ -1,9 +1,161 @@
 \section{Issues Checklist}
 \subsection{Naming Convetions}
+\begin{enumerate}
+	\item Class name is prettu self-explanatory. It handles all the registered resources.
+	
+	Reading the Javadoc inside the class file adds mor information: this class handles some Resource Objects that are involved in a transaction. These objects are stored in a list together with their state relative to such transaction.
+	
+	Since an instance of this transaction can be accessed bt multiple threads, tha Javadoc suggest to use serialization in the implementation
+	
+	All the informations relative to an instance of this class should be reconstructible in case of system failure, so they are recorded.
+	\begin{itemize}
+		\item Line 112: Resource called laoResource
+		\item Line 774: boolean called rmErr, maybe removedError
+		\item Line 901: int called i that correspond to the number of the current resource; used to loop but maybe it should be used a better name since it's not only a loop variable
+		\item Line 1470: this method is the distribution of one phase commit, not the commit itself
+	\end{itemize}
+	Exception called with general name.
+	\begin{itemize}
+		\item Line 262: e
+		\item Line 304: exc
+		\item Line 488: exc
+		\item Line 538: exc
+		\item Line 563: ex2
+		\item Line 774: exc
+		\item Line 862: e with also empty statement
+		\item Line 1049: exc
+		\item Line 1124: exc
+		\item Line 1259: exc
+		\item Line 1426: exc
+		\item Line 1577: exc
+		\item Line 1601: e
+		\item Line 1675: e
+	\end{itemize}
+	\item Lara
+	\item THere is only one class called RegisteredResources, that is a noun with capitalized letters for every word.
+	\item Lara
+	\item Methods are all verbs and all are written in camelcase.
+	\item Lara
+	\item Costants LOG\textunderscore SECTION\textunderscore NAME and HEURISTIC\textunderscore LOG\textunderscore SECTION\textunderscore NAME are all in uppercase
+\end{enumerate}
 \subsection{Indention}
+\begin{enumerate}
+	\setcounter{enumi}{7}
+	\item Lara
+	\item Our class contains 818 tabs that are spread every now and then.
+	
+	In Particular in the assigned method there tabs in:
+	\begin{itemize}
+		\item From line 758 included to line 764 included
+		\item From line 766 included to line 772 included
+		\item From line 822 included to line 825 included
+		\item From line 828 included to line 832 included
+		\item From line 841 included to line 844 included
+		\item From line 847 included to line 850 included
+		\item Line 868
+		\item Line 869
+		\item Line 873
+		\item Line 874
+		\item Line 875
+	\end{itemize}
+\end{enumerate}
 \subsection{Braces}
+\begin{enumerate}
+	\setcounter{enumi}{9}
+	\item Lara
+	\item Our class has 16 if condition with only one statement not enclosed in a curly braces block \url{https://regex101.com/r/cQ9lH5/1}
+	\begin{itemize}
+		\item Line 219
+		\item Line 602
+		\item Line 623
+		\item Line 714
+		\item Line 890
+		\item Line 928
+		\item Line 930 also else misses curly braces
+		\item Line 988
+		\item Line 1151
+		\item Lone 1179
+		\item Line 1184 also else misses curly braces
+		\item Line 1186
+		\item Line 1506
+		\item Line 1610 also else misses curly braces
+		\item Line 1614 also else misses curly braces
+		\item Line 1711
+	\end{itemize}
+\end{enumerate}
 \subsection{File Organzation}
+\begin{enumerate}
+	\setcounter{enumi}{11}
+	\item Lara
+	\item There are line that exceed 80 characters
+	\begin{itemize}
+		\item Line 114
+		\item Line 126
+		\item Line 133
+		\item Line 169
+		\item Line 236
+		\item Line 244
+		\item Line 249
+		\item Line 297
+		\item Line 310
+		\item Line 311
+		\item Line 329
+		\item Line 603
+		\item Line 693
+		\item Line 741
+		\item Line 777
+		\item Line 779
+		\item Line 780
+		\item Line 824
+		\item Line 829
+		\item Line 830
+		\item Line 843
+		\item Line 848
+		\item Line 849
+		\item Line 869
+		\item Line 875
+		\item Line 892
+		\item Line 893
+		\item Line 913
+		\item Line 924
+		\item Line 1016
+		\item Line 1080
+		\item Line 1082
+		\item Line 1083
+		\item Line 1107
+		\item Line 1108
+		\item Line 1131
+		\item Line 1135
+		\item Line 1153
+		\item Line 1155
+		\item Line 1181
+		\item Line 1218
+		\item Line 1246
+		\item Line 1294
+		\item Line 1499
+		\item Line 1562
+		\item Line 1571
+		\item Line 1602
+		\item Line 1610
+		\item Line 1614
+		\item Line 1641
+		\item Line 1645
+		\item Line 1646
+		\item Line 1656
+		\item Line 1660
+		\item Line 1661
+		\item Line 1694
+		\item Line 1732
+	\end{itemize}
+	\item Lara
+\end{enumerate}
 \subsection{Wrapping Lines}
+\begin{enumerate}
+	\setcounter{enumi}{14}
+	\item No break lines are performed if there isn't a operator or a comma RECHECK
+	\item Lara
+	\item There are lot of unaligned lines with wrong tabulation
+\end{enumerate}
 \subsection{Comments}
 \subsection{Java Source Files}
 \subsection{Package and Import Statements}
