@@ -154,19 +154,175 @@
 	\setcounter{enumi}{14}
 	\item No break lines are performed if there isn't a operator or a comma RECHECK
 	\item Lara
-	\item There are lot of unaligned lines with wrong tabulation
+	\item There are lot of unaligned lines with wrong tabulation in lines:
+	\begin{itemize}
+		\item Line 239
+		\item Line 242
+		\item Line 243 with whole if block
+		\item Line 300 maybe copied from Line 239
+		\item Line 303 maybe copied from Line 242
+		\item Line 304 with whole if block, maybe copied from Line 243
+		\item Line 367
+		\item Line 523
+		\item Line 533
+		\item Line 638 whole if block
+		\item Line 646 whole if block
+		\item Line 826 one unneeded space
+		\item Lines 845-847 one unneeded space
+		\item Line 868
+		\item Lines 871-873
+		\item Lines 917-924
+		\item Lines 1106-1111
+		\item Line 1130
+		\item Lines 1293-1298
+		\item Line 1606 whole if block
+		\item Lines 1693-1698
+	\end{itemize}
 \end{enumerate}
 \subsection{Comments}
+\begin{enumerate}
+	\setcounter{enumi}{17}
+	\item Lara
+	\item There are lots of commented out code, often with little or no comments
+	\begin{itemize}
+		\item Lines 113-118 comment: IASRI 4662745
+		\item Lines 123-126 comment: moved in another class: Configuration.java
+		\item Lines 161-170 no comment
+		\item Line 274 comment: code not reachable
+		\item Line 335 comment: code not executed
+		\item Line 369 no comment
+		\item Lines 387-395 has javadoc but no comment about why is commented out
+		\item Lines 498-499 no comment
+		\item Line 644 no comment
+		\item Lines 704-712 no comment
+		\item Lines 827-833 no comment
+		\item Lines 877-896 no comments
+		\item Lines 1449-1459 comment: Admin package is not supported anymore
+		\item Lines 1487-1504 no comment
+		\item Lines 1595-1600 comment: IASRI 4722883
+		\item Lines 1745-1754 comment IASRI 4662745
+	\end{itemize}
+\end{enumerate}
 \subsection{Java Source Files}
+\begin{enumerate}
+	\setcounter{enumi}{19}
+	\item Lara
+	\item No public class constructor is specified in the file. There are only 2 package friendly constructors available at line 152 and 183 after class variables.
+	\item Lara
+	\item Javadoc is almost complete. Some @param are missing in one constructor
+\end{enumerate}
 \subsection{Package and Import Statements}
+\begin{enumerate}
+	\setcounter{enumi}{23}
+	\item Lara
+\end{enumerate}
 \subsection{Class and Interface Declaration}
+\begin{enumerate}
+	\setcounter{enumi}{24}
+	\item
+	\begin{itemize}
+		\item Class documentation comment: OK
+		\item Class statement: OK
+		\item Class implementation comment: optional, not present in this class
+		\item Class variables:
+		\begin{itemize}
+			\item No public vars OK
+			
+			\item No protected vars OK
+			
+			\item No package vars OK
+			
+			\item Some private vars mixed with static vars \color{red}KO \color{black}
+		\end{itemize}
+		\item Instance variables:
+		\begin{itemize}
+			\item No public vars OK
+			
+			\item No protected vars OK
+			
+			\item No package vars OK
+			
+			\item Some private vars mixed with static vars \color{red}KO\color{black}
+		\end{itemize}
+		\item Constructors: OK
+		\item Methods OK
+	\end{itemize}
+	\item Lara
+	\item Exceptions are often duplicates. Sometimes is obvious there was a copy-paste work
+\end{enumerate}
 \subsection{Initialization and Declaration}
+\begin{enumerate}
+	\setcounter{enumi}{27}
+	\item Lara
+	\item All variables in the method distributeCommit are declared in the proper scope
+	\item Lara
+	\item All object refs in the method distributeCommit are initialized before their usage
+	\item Lara
+	\item Some variables in the method distributeCommit are not declared at the start of a block:
+	\begin{itemize}
+		\item Line 721
+		\item Line 722
+		\item Line 754
+		\item Line 755
+	\end{itemize}
+\end{enumerate}
 \subsection{Method Calls}
+\begin{enumerate}
+	\setcounter{enumi}{33}
+	\item Lara
+	\item All methods have a unique name
+	\item Lara
+\end{enumerate}
 \subsection{Arrays}
+\begin{enumerate}
+	\setcounter{enumi}{36}
+	\item No arrays in the class
+	\item Lara
+	\item No arrays in the class
+\end{enumerate}
 \subsection{Object Comparison}
+\begin{enumerate}
+	\setcounter{enumi}{39}
+	\item Lara
+\end{enumerate}
 \subsection{Output Format}
+\begin{enumerate}
+	\setcounter{enumi}{40}
+	\item The only output in our method is in the logs. No spelling or grammatical errors are present, only some abbreviations
+	\item Lara
+	\item Some spaces in logs are replaced with underscores
+\end{enumerate}
 \subsection{Computation Comparison and Assignments}
+\begin{enumerate}
+	\setcounter{enumi}{43}
+	\item Lara
+	\item Good parenthesizing, good operators order, no numerical operation
+	\item Lara
+	\item In the class is not present any division
+	\item Lara
+	\item Comparison between boolean are made correctly
+	\item Lara
+	\item No implicit conversions are made in the class
+\end{enumerate}
 \subsection{Exceptions}
+\begin{enumerate}
+	\setcounter{enumi}{51}
+	\item Lara
+	\item Paolo
+\end{enumerate}
 \subsection{Flow of Control}
+\begin{enumerate}
+	\setcounter{enumi}{53}
+	\item Lara
+	\item No switch statements are present in the class
+	\item Lara
+\end{enumerate}
 \subsection{Files}
+\begin{enumerate}
+	\setcounter{enumi}{56}
+	\item No file used in the class
+	\item No file used in the class
+	\item No file used in the class
+	\item No file used in the class
+\end{enumerate}
 \subsection{Other Problems Encountered}
