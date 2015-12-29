@@ -1,13 +1,13 @@
 \section{Issues Checklist}
-\subsection{Naming Convetions}
+\subsection{Naming Conventions}
 \begin{enumerate}
-	\item Class name is prettu self-explanatory. It handles all the registered resources.
+	\item Class name is pretty self-explanatory. It handles all the registered resources.
 	
-	Reading the Javadoc inside the class file adds mor information: this class handles some Resource Objects that are involved in a transaction. These objects are stored in a list together with their state relative to such transaction.
+	Reading the Javadoc inside the class file adds more information: this class handles some Resource Objects that are involved in a transaction. These objects are stored in a list together with their state relative to such transaction.
 	
-	Since an instance of this transaction can be accessed bt multiple threads, tha Javadoc suggest to use serialization in the implementation
+	Since an instance of this transaction can be accessed bt multiple threads, the Javadoc suggest to use serialization in the implementation
 	
-	All the informations relative to an instance of this class should be reconstructible in case of system failure, so they are recorded.
+	All the information relative to an instance of this class should be reconstructable in case of system failure, so they are recorded.
 	\begin{itemize}
 		\item Line 112: Resource called laoResource
 		\item Line 774: boolean called rmErr, maybe removedError
@@ -31,17 +31,55 @@
 		\item Line 1601: e
 		\item Line 1675: e
 	\end{itemize}
-	\item Lara
-	\item THere is only one class called RegisteredResources, that is a noun with capitalized letters for every word.
-	\item Lara
+	\item According to the function that we have to inspect, there are no one-character variables used.
+	\item There is only one class called RegisteredResources, that is a noun with capitalized letters for every word.
+	\item Although our function belongs to a class, there are no interface to consider.
 	\item Methods are all verbs and all are written in camelcase.
-	\item Lara
-	\item Costants LOG\textunderscore SECTION\textunderscore NAME and HEURISTIC\textunderscore LOG\textunderscore SECTION\textunderscore NAME are all in uppercase
+	\item The variable "private static boolean lastXAResCommit" is a bit ambiguous: we don't know if the two letters "XA" define an abbreviation or something else. In the other cases, all the attributes are written in the right way.
+	\item Constants LOG\textunderscore SECTION\textunderscore NAME and HEURISTIC\textunderscore LOG\textunderscore SECTION\textunderscore NAME are all in uppercase
 \end{enumerate}
 \subsection{Indention}
 \begin{enumerate}
 	\setcounter{enumi}{7}
-	\item Lara
+	\item Although the class code has a clear order, there are some lines in which the tab is used, some lines in which both tabs and spaces are used and some lines in which there are used more or less than 4 spaces. According to the first case:
+	    \begin{itemize}
+	        \item lines from 758 (included) to 764 (included);
+	        \item lines from 766 (included) to 772 (included);
+	        \item lines 822 and 823;
+	        \item lines from 829 (included) to 831 (included);
+	        \item lines 841 and 842.
+	    \end{itemize}
+	According to the second case:
+	    \begin{itemize}
+	        \item line 828;
+	        \item line 832;
+	        \item lines from 847 (included) to 850 (included).
+	    \end{itemize}
+	According to the third and final case:
+	    \begin{itemize}
+	        \item line 766;
+	        \item lines from 790 (included) to 804 (included);
+	        \item line 807;
+	        \item lines from 809 (included) to 811 (included);
+	        \item lines from 815 (included) to 822 (included);
+	        \item line 824;
+	        \item line 827;
+		    \item line 833;
+		    \item lines from 835 (included) to 838 (included);
+		    \item line 840;
+		    \item line 843;
+		    \item lines 845 and 846;
+		    \item lines from 854 (included) to 856 (included);
+		    \item line 860;
+		    \item line 862;
+		    \item lines from 866 (included) to 869 (included);
+		    \item lines from 871 (included) to 875 (included);
+		    \item line 892;
+		    \item lines from 898 (included) to 903 (included);
+		    \item line 905;
+		    \item lines 917 and 918;
+		    \item lines from 921 (included) to 924 (included).
+	    \end{itemize}
 	\item Our class contains 818 tabs that are spread every now and then.
 	
 	In Particular in the assigned method there tabs in:
@@ -62,7 +100,7 @@
 \subsection{Braces}
 \begin{enumerate}
 	\setcounter{enumi}{9}
-	\item Lara
+	\item Only in the "if" branch of the first block "try-catch", the Allman style is used. In the other cases, it's used the Kernighan and Ritchie style.
 	\item Our class has 16 if condition with only one statement not enclosed in a curly braces block \url{https://regex101.com/r/cQ9lH5/1}
 	\begin{itemize}
 		\item Line 219
@@ -86,7 +124,7 @@
 \subsection{File Organzation}
 \begin{enumerate}
 	\setcounter{enumi}{11}
-	\item Lara
+	\item Blank lines and optimal comments are used to separate sections.
 	\item There are line that exceed 80 characters
 	\begin{itemize}
 		\item Line 114
@@ -147,13 +185,24 @@
 		\item Line 1694
 		\item Line 1732
 	\end{itemize}
-	\item Lara
+	\item When the line length exceed 80 characters, it is not longer than 120 characters.
 \end{enumerate}
 \subsection{Wrapping Lines}
 \begin{enumerate}
 	\setcounter{enumi}{14}
 	\item No break lines are performed if there isn't a operator or a comma RECHECK
-	\item Lara
+	\item Not always the higher-level breaks are used. In fact, it happens according to the lines listed below:
+	    \begin{itemize}
+	        \item lines 730 and 731;
+	        \item lines from 760 (included) to 763 (included);
+	        \item lines from 768 (included) to 771 (included);
+	        \item lines 779 and 780;
+	        \item lines from 822 (included) to 824 (included);
+	        \item lines from 841 (included) to 843 (included);
+	        \item lines from 847 (included) to 850 (included);
+	        \item lines 868 and 869;
+	        \item lines from 873 (included) to 875 (included).
+	    \end{itemize}
 	\item There are lot of unaligned lines with wrong tabulation in lines:
 	\begin{itemize}
 		\item Line 239
@@ -182,7 +231,7 @@
 \subsection{Comments}
 \begin{enumerate}
 	\setcounter{enumi}{17}
-	\item Lara
+	\item Maybe there could be more comments referring to the sections about the logs, but in the other cases the comments are used to adequately explain what the class, method and block of code are doing.
 	\item There are lots of commented out code, often with little or no comments
 	\begin{itemize}
 		\item Lines 113-118 comment: IASRI 4662745
@@ -206,15 +255,23 @@
 \subsection{Java Source Files}
 \begin{enumerate}
 	\setcounter{enumi}{19}
-	\item Lara
+	\item Referring to the file containing the class in which there is our function, this constraint is not violated.
 	\item No public class constructor is specified in the file. There are only 2 package friendly constructors available at line 152 and 183 after class variables.
-	\item Lara
+	\item In some cases the Javadoc is not completed:
+	    \begin{itemize}
+	        \item in the first constructor, the Javadoc contains only one of the two parameters;
+	        \item in the second constructor, the Javadoc doesn't contain the specified parameters;
+	        \item there is no Javadoc for the method "getLAOResource";
+	        \item referring to our function, the third class of exception is not contained in the Javadoc;
+	        \item in the function called "distributedForget", two parameters are not specified in the Javadoc;
+	        \item in the function called "commitOnePhase", two classes of exception are not specified in the Javadoc.
+	    \end{itemize}
 	\item Javadoc is almost complete. Some @param are missing in one constructor
 \end{enumerate}
 \subsection{Package and Import Statements}
 \begin{enumerate}
 	\setcounter{enumi}{23}
-	\item Lara
+	\item According to our function, the package statement is the first non-commented statement. Then it is followed by the import statements.
 \end{enumerate}
 \subsection{Class and Interface Declaration}
 \begin{enumerate}
@@ -247,17 +304,22 @@
 		\item Constructors: OK
 		\item Methods OK
 	\end{itemize}
-	\item Lara
+	\item Only the method "getLAOResource" is not near the functions that work with the resources. The other methods are grouped by the functionality: at first, there are the two constructors; then the methods referring to work with the resources and finally there are the methods regarding the distribution of the messages.
 	\item Exceptions are often duplicates. Sometimes is obvious there was a copy-paste work
 \end{enumerate}
 \subsection{Initialization and Declaration}
 \begin{enumerate}
 	\setcounter{enumi}{27}
-	\item Lara
+	\item All the attributes of the class are private. The static variable Logger, called "\_logger", is not private, but it should be in this way by default. 
+	
+    The type of the two arraylists that are attributes of the class is not specified: it should be written to be clear.
+    
+    Referring only to our class, the visibility of its private method is correct because it is used only by the class itself. 
+
 	\item All variables in the method distributeCommit are declared in the proper scope
-	\item Lara
+	\item In this class, the constructors are not used.
 	\item All object refs in the method distributeCommit are initialized before their usage
-	\item Lara
+	\item Only in the method called "commitOnePhase" there are two variables that are declared but not initialized. These variables are "retry\_limit" and "no\_of\_attempts".
 	\item Some variables in the method distributeCommit are not declared at the start of a block:
 	\begin{itemize}
 		\item Line 721
@@ -269,60 +331,99 @@
 \subsection{Method Calls}
 \begin{enumerate}
 	\setcounter{enumi}{33}
-	\item Lara
+	\item In this class, only a method is used, the private one called "distributeForget". In this case, the parameters are presented in the correct order.
 	\item All methods have a unique name
-	\item Lara
+	\item In this class, only a method is used, the private one called "distributeForget". In this case, the method returned values are used properly.
 \end{enumerate}
 \subsection{Arrays}
 \begin{enumerate}
 	\setcounter{enumi}{36}
 	\item No arrays in the class
-	\item Lara
+	\item Referring to the class of our method, all the arrays and other collections indexes are prevented from going out-of-bounds.
 	\item No arrays in the class
 \end{enumerate}
 \subsection{Object Comparison}
 \begin{enumerate}
 	\setcounter{enumi}{39}
-	\item Lara
+	\item Referring to the class of our method, there are some lines in which is not used "equal", but the comparison of two objects is done through "==": 
+	    \begin{itemize}
+	        \item line 463;
+	        \item line 470;
+	        \item line 599;
+	        \item line 608;
+	        \item line 629;
+	        \item line 635;
+	        \item lines 730 and 731;
+	        \item lines 1235 and 1236;
+	        \item lines 1531 and 1532;
+	        \item line 1610;
+	        \item line 1614.
+	    \end{itemize}
 \end{enumerate}
 \subsection{Output Format}
 \begin{enumerate}
 	\setcounter{enumi}{40}
 	\item The only output in our method is in the logs. No spelling or grammatical errors are present, only some abbreviations
-	\item Lara
+	\item According to the class of our method, the error messages are comprehensive, thanks also to the comments written that are referred to the code. But maybe it should be more meaningful to add others comments to explain better what it happens and how to solve the problem.
 	\item Some spaces in logs are replaced with underscores
 \end{enumerate}
 \subsection{Computation Comparison and Assignments}
 \begin{enumerate}
 	\setcounter{enumi}{43}
-	\item Lara
+	\item Only in the method "involved()", that return a boolean value, it's used the Brutish Programming: we are referring to the lines 410, 411 and 412.
 	\item Good parenthesizing, good operators order, no numerical operation
-	\item Lara
+	\item Referring to the class of our method, there are some lines in which the parenthesis are not used to avoid operator precedence problems:
+	    \begin{itemize}
+	        \item line 252;
+	        \item line 305;
+	        \item line 312;
+	        \item line 463;
+	        \item line 470;
+	        \item line 551;
+	        \item line 568;
+	        \item line 635;
+	        \item line 776;
+	        \item lines 779 and 780;
+	        \item lines 790, 791 and 792;
+	        \item lines 806 and 807;
+	        \item line 852;
+	        \item lines 1067, 1068 and 1069;
+	        \item lines 1082 and 1083;
+	        \item lines 1087 and 1088;
+	        \item line 1113;
+	        \item lines 1261 and 1262;
+	        \item line 1277;
+	        \item line 1602;
+	        \item lines 1622 and 1623;
+	        \item line 1665. 
+	    \end{itemize}
 	\item In the class is not present any division
-	\item Lara
+	\item Integer arithmetic is used appropriately. Maybe, at lines 918 and 1181, referring to the two additions, it could happen overflows.
 	\item Comparison between boolean are made correctly
-	\item Lara
+	\item Referring to lines 243, 304, 488, 538, 563, 653, 774, 1049, 1259, 1365 and 1577, it's better to be as specific as possible. So it's not correct to catch the Throwable class: it's too much general. Maybe it's better to use the Exception class, that it's general too: according to the Java documentation, "An Error is a subclass of Throwable that indicates serious problems that a reasonable application should not try to catch". 
+	
+    At lines 262, 322, 862, 1124, 1287, 1426 and 1675, it's not specified how to manage the exception.
 	\item No implicit conversions are made in the class
 \end{enumerate}
 \subsection{Exceptions}
 \begin{enumerate}
 	\setcounter{enumi}{51}
-	\item Lara
+	\item All the relevant exceptions are caught: in fact, in the catch blocks, it is specified a superclass of exceptions, that is the Throwable class; in this way, it's very difficult not to cover all the exceptions that can happen in the class.
 	\item Paolo
 \end{enumerate}
 \subsection{Flow of Control}
 \begin{enumerate}
 	\setcounter{enumi}{53}
-	\item Lara
+	\item There are no switch statement in the class of our method.
 	\item No switch statements are present in the class
-	\item Lara
+	\item Referring to the class of our method, all the loops are correctly formed, with the appropriate initialization, increment and termination expressions.
 \end{enumerate}
 \subsection{Files}
 \begin{enumerate}
 	\setcounter{enumi}{56}
-	\item No file used in the class
-	\item No file used in the class
-	\item No file used in the class
-	\item No file used in the class
+	\item In the class of our method, there are no files used.
+	\item In the class of our method, there are no files used.
+	\item In the class of our method, there are no files used.
+	\item In the class of our method, there are no files used.
 \end{enumerate}
 \subsection{Other Problems Encountered}
