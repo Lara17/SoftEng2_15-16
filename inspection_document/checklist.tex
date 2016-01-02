@@ -8,6 +8,24 @@
 	Since an instance of this transaction can be accessed bt multiple threads, the Javadoc suggest to use serialization in the implementation
 	
 	All the information relative to an instance of this class should be reconstructable in case of system failure, so they are recorded.
+\begin{lstlisting}
+/**
+* The RegisteredResources class provides operations that manage a list
+* of Resource objects involved in a transaction, and their states relative
+* to the transaction. Resource references are stored in lists as there is no
+* way to perform Resource reference comparisons. As an instance of this
+* class may be accessed from multiple threads within a process,
+* serialisation for thread-safety is necessary in the implementation.
+* The information recorded in an instance of this class needs to be
+* reconstructible in the case of a system failure.
+*
+* @version 0.02
+*
+* @author Simon Holdsworth, IBM Corporation
+*
+* @see
+*/
+\end{lstlisting}
 	\begin{itemize}
 		\item Line 112: Resource called laoResource
 		\item Line 774: boolean called rmErr, maybe removedError
@@ -190,7 +208,7 @@
 \subsection{Wrapping Lines}
 \begin{enumerate}
 	\setcounter{enumi}{14}
-	\item No break lines are performed if there isn't a operator or a comma RECHECK
+	\item No break lines are performed if there isn't a operator or a comma
 	\item Not always the higher-level breaks are used. In fact, it happens according to the lines listed below:
 	    \begin{itemize}
 	        \item lines 730 and 731;
@@ -266,7 +284,7 @@
 	        \item in the function called "distributedForget", two parameters are not specified in the Javadoc;
 	        \item in the function called "commitOnePhase", two classes of exception are not specified in the Javadoc.
 	    \end{itemize}
-	\item Javadoc is almost complete. Some @param are missing in one constructor
+	\item Where javadoc is present it's almost complete. Some @param are missing in one constructor
 \end{enumerate}
 \subsection{Package and Import Statements}
 \begin{enumerate}
@@ -409,7 +427,7 @@
 \begin{enumerate}
 	\setcounter{enumi}{51}
 	\item All the relevant exceptions are caught: in fact, in the catch blocks, it is specified a superclass of exceptions, that is the Throwable class; in this way, it's very difficult not to cover all the exceptions that can happen in the class.
-	\item Paolo
+	\item Every catch block handles correctly the thrown exception
 \end{enumerate}
 \subsection{Flow of Control}
 \begin{enumerate}
@@ -427,3 +445,6 @@
 	\item In the class of our method, there are no files used.
 \end{enumerate}
 \subsection{Other Problems Encountered}
+	The class file is very long in fact it its 1758 lines. Probably dividing it in more than one class would improve readability and maintainability.
+	
+	Some catch statements contain multiple \ttfamily else if \normalfont statement, in this case using a switch can greatly improve readability and the catch block can be shortened by adding more method to handle this massive use of else if statement that make the method much longer.
