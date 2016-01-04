@@ -5,7 +5,7 @@
 	
 	Reading the Javadoc inside the class file adds more information: this class handles some Resource Objects that are involved in a transaction. These objects are stored in a list together with their state relative to such transaction.
 	
-	Since an instance of this transaction can be accessed bt multiple threads, the Javadoc suggest to use serialization in the implementation
+	Since an instance of this transaction can be accessed by multiple threads, the Javadoc suggests to use serialization in the implementation.
 	
 	All the information relative to an instance of this class should be reconstructable in case of system failure, so they are recorded.
 \begin{lstlisting}
@@ -27,39 +27,39 @@
 */
 \end{lstlisting}
 	\begin{itemize}
-		\item Line 112: Resource called laoResource
-		\item Line 774: boolean called rmErr, maybe removedError
-		\item Line 901: int called i that correspond to the number of the current resource; used to loop but maybe it should be used a better name since it's not only a loop variable
-		\item Line 1470: this method is the distribution of one phase commit, not the commit itself
+		\item Line 112: a Resource called laoResource;
+		\item line 774: a boolean called rmErr, maybe removedError;
+		\item line 901: an integer called i that corresponds to the number of the current resource; it used to a loop but maybe it should be used a better name, since it's not only a loop variable;
+		\item line 1470: this method is the distribution of one phase commit, not the commit itself.
 	\end{itemize}
 	Exception called with general name.
 	\begin{itemize}
-		\item Line 262: e
-		\item Line 304: exc
-		\item Line 488: exc
-		\item Line 538: exc
-		\item Line 563: ex2
-		\item Line 774: exc
-		\item Line 862: e with also empty statement
-		\item Line 1049: exc
-		\item Line 1124: exc
-		\item Line 1259: exc
-		\item Line 1426: exc
-		\item Line 1577: exc
-		\item Line 1601: e
-		\item Line 1675: e
+		\item Line 262: e;
+		\item line 304: exc;
+		\item line 488: exc;
+		\item line 538: exc;
+		\item line 563: ex2;
+		\item line 774: exc;
+		\item line 862: e with also empty statement;
+		\item line 1049: exc;
+		\item line 1124: exc;
+		\item line 1259: exc;
+		\item line 1426: exc;
+		\item line 1577: exc;
+		\item line 1601: e;
+		\item line 1675: e.
 	\end{itemize}
 	\item According to the function that we have to inspect, there are no one-character variables used.
-	\item There is only one class called RegisteredResources, that is a noun with capitalized letters for every word.
+	\item There is only one class called "RegisteredResources", that is a noun with capitalized letters for every word.
 	\item Although our function belongs to a class, there are no interface to consider.
 	\item Methods are all verbs and all are written in camelcase.
 	\item The variable "private static boolean lastXAResCommit" is a bit ambiguous: we don't know if the two letters "XA" define an abbreviation or something else. In the other cases, all the attributes are written in the right way.
-	\item Constants LOG\textunderscore SECTION\textunderscore NAME and HEURISTIC\textunderscore LOG\textunderscore SECTION\textunderscore NAME are all in uppercase
+	\item Constants LOG\textunderscore SECTION\textunderscore NAME and HEURISTIC\textunderscore LOG\textunderscore SECTION\textunderscore NAME are all in uppercase.
 \end{enumerate}
 \subsection{Indention}
 \begin{enumerate}
 	\setcounter{enumi}{7}
-	\item Although the class code has a clear order, there are some lines in which the tab is used, some lines in which both tabs and spaces are used and some lines in which there are used more or less than 4 spaces. According to the first case:
+	\item Although the class code has a clear order, there are some lines in which the tab is used, some lines in which both tabs and spaces are used and some lines in which there are used more or less than four spaces. According to the first case:
 	    \begin{itemize}
 	        \item lines from 758 (included) to 764 (included);
 	        \item lines from 766 (included) to 772 (included);
@@ -100,115 +100,115 @@
 	    \end{itemize}
 	\item Our class contains 818 tabs that are spread every now and then.
 	
-	In Particular in the assigned method there tabs in:
+	In particular, in the assigned method, there are tabs in:
 	\begin{itemize}
-		\item From line 758 included to line 764 included
-		\item From line 766 included to line 772 included
-		\item From line 822 included to line 825 included
-		\item From line 828 included to line 832 included
-		\item From line 841 included to line 844 included
-		\item From line 847 included to line 850 included
-		\item Line 868
-		\item Line 869
-		\item Line 873
-		\item Line 874
-		\item Line 875
+		\item from line 758 included to line 764 included;
+		\item from line 766 included to line 772 included;
+		\item from line 822 included to line 825 included;
+		\item from line 828 included to line 832 included;
+		\item from line 841 included to line 844 included;
+		\item from line 847 included to line 850 included;
+		\item line 868;
+		\item line 869;
+		\item line 873;
+		\item line 874;
+		\item line 875.
 	\end{itemize}
 \end{enumerate}
 \subsection{Braces}
 \begin{enumerate}
 	\setcounter{enumi}{9}
 	\item Only in the "if" branch of the first block "try-catch", the Allman style is used. In the other cases, it's used the Kernighan and Ritchie style.
-	\item Our class has 16 if condition with only one statement not enclosed in a curly braces block \url{https://regex101.com/r/cQ9lH5/1}
+	\item Our class has 16 "if" condition with only one statement not enclosed in a curly braces block \url{https://regex101.com/r/cQ9lH5/1} .
 	\begin{itemize}
-		\item Line 219
-		\item Line 602
-		\item Line 623
-		\item Line 714
-		\item Line 890
-		\item Line 928
-		\item Line 930 also else misses curly braces
-		\item Line 988
-		\item Line 1151
-		\item Lone 1179
-		\item Line 1184 also else misses curly braces
-		\item Line 1186
-		\item Line 1506
-		\item Line 1610 also else misses curly braces
-		\item Line 1614 also else misses curly braces
-		\item Line 1711
+		\item Line 219;
+		\item line 602;
+		\item line 623;
+		\item line 714;
+		\item line 890;
+		\item line 928;
+		\item line 930 (also else misses curly braces);
+		\item line 988;
+		\item line 1151;
+		\item line 1179;
+		\item line 1184 (also else misses curly braces);
+		\item line 1186;
+		\item line 1506;
+		\item line 1610 (also else misses curly braces);
+		\item line 1614 (also else misses curly braces);
+		\item line 1711.
 	\end{itemize}
 \end{enumerate}
 \subsection{File Organzation}
 \begin{enumerate}
 	\setcounter{enumi}{11}
 	\item Blank lines and optimal comments are used to separate sections.
-	\item There are line that exceed 80 characters
+	\item There are lines that exceed 80 characters:
 	\begin{itemize}
-		\item Line 114
-		\item Line 126
-		\item Line 133
-		\item Line 169
-		\item Line 236
-		\item Line 244
-		\item Line 249
-		\item Line 297
-		\item Line 310
-		\item Line 311
-		\item Line 329
-		\item Line 603
-		\item Line 693
-		\item Line 741
-		\item Line 777
-		\item Line 779
-		\item Line 780
-		\item Line 824
-		\item Line 829
-		\item Line 830
-		\item Line 843
-		\item Line 848
-		\item Line 849
-		\item Line 869
-		\item Line 875
-		\item Line 892
-		\item Line 893
-		\item Line 913
-		\item Line 924
-		\item Line 1016
-		\item Line 1080
-		\item Line 1082
-		\item Line 1083
-		\item Line 1107
-		\item Line 1108
-		\item Line 1131
-		\item Line 1135
-		\item Line 1153
-		\item Line 1155
-		\item Line 1181
-		\item Line 1218
-		\item Line 1246
-		\item Line 1294
-		\item Line 1499
-		\item Line 1562
-		\item Line 1571
-		\item Line 1602
-		\item Line 1610
-		\item Line 1614
-		\item Line 1641
-		\item Line 1645
-		\item Line 1646
-		\item Line 1656
-		\item Line 1660
-		\item Line 1661
-		\item Line 1694
-		\item Line 1732
+		\item line 114;
+		\item line 126;
+		\item line 133;
+		\item line 169;
+		\item line 236;
+		\item line 244;
+		\item line 249;
+		\item line 297;
+		\item line 310;
+		\item line 311;
+		\item line 329;
+		\item line 603;
+		\item line 693;
+		\item line 741;
+		\item line 777;
+		\item line 779;
+		\item line 780;
+		\item line 824;
+		\item line 829;
+		\item line 830;
+		\item line 843;
+		\item line 848;
+		\item line 849;
+		\item line 869;
+		\item line 875;
+		\item line 892;
+		\item line 893;
+		\item line 913;
+		\item line 924;
+		\item line 1016;
+		\item line 1080;
+		\item line 1082;
+		\item line 1083;
+		\item line 1107;
+		\item line 1108;
+		\item line 1131;
+		\item line 1135;
+		\item line 1153;
+		\item line 1155;
+		\item line 1181;
+		\item line 1218;
+		\item line 1246;
+		\item line 1294;
+		\item line 1499;
+		\item line 1562;
+		\item line 1571;
+		\item line 1602;
+		\item line 1610;
+		\item line 1614;
+		\item line 1641;
+		\item line 1645;
+		\item line 1646;
+		\item line 1656;
+		\item line 1660;
+		\item line 1661;
+		\item line 1694;
+		\item line 1732.
 	\end{itemize}
 	\item When the line length exceed 80 characters, it is not longer than 120 characters.
 \end{enumerate}
 \subsection{Wrapping Lines}
 \begin{enumerate}
 	\setcounter{enumi}{14}
-	\item No break lines are performed if there isn't a operator or a comma
+	\item No break lines are performed if there isn't an operator or a comma.
 	\item Not always the higher-level breaks are used. In fact, it happens according to the lines listed below:
 	    \begin{itemize}
 	        \item lines 730 and 731;
@@ -221,60 +221,60 @@
 	        \item lines 868 and 869;
 	        \item lines from 873 (included) to 875 (included).
 	    \end{itemize}
-	\item There are lot of unaligned lines with wrong tabulation in lines:
+	\item There are a lot of unaligned lines with wrong tabulation:
 	\begin{itemize}
-		\item Line 239
-		\item Line 242
-		\item Line 243 with whole if block
-		\item Line 300 maybe copied from Line 239
-		\item Line 303 maybe copied from Line 242
-		\item Line 304 with whole if block, maybe copied from Line 243
-		\item Line 367
-		\item Line 523
-		\item Line 533
-		\item Line 638 whole if block
-		\item Line 646 whole if block
-		\item Line 826 one unneeded space
-		\item Lines 845-847 one unneeded space
-		\item Line 868
-		\item Lines 871-873
-		\item Lines 917-924
-		\item Lines 1106-1111
-		\item Line 1130
-		\item Lines 1293-1298
-		\item Line 1606 whole if block
-		\item Lines 1693-1698
+		\item line 239;
+		\item line 242;
+		\item line 243 (with whole "if" block);
+		\item line 300 (maybe copied from Line 239);
+		\item line 303 (maybe copied from Line 242);
+		\item line 304 (with whole "if" block, maybe copied from Line 243);
+		\item line 367;
+		\item line 523;
+		\item line 533;
+		\item line 638 (whole "if" block);
+		\item line 646 (whole "if" block);
+		\item line 826 (one unneeded space);
+		\item lines 845-847 (one unneeded space);
+		\item line 868;
+		\item lines 871-873;
+		\item lines 917-924;
+		\item lines 1106-1111;
+		\item line 1130;
+		\item lines 1293-1298;
+		\item line 1606 (whole "if" block);
+		\item lines 1693-1698.
 	\end{itemize}
 \end{enumerate}
 \subsection{Comments}
 \begin{enumerate}
 	\setcounter{enumi}{17}
 	\item Maybe there could be more comments referring to the sections about the logs, but in the other cases the comments are used to adequately explain what the class, method and block of code are doing.
-	\item There are lots of commented out code, often with little or no comments
+	\item There are lots of commented out code, often with little or no comments.
 	\begin{itemize}
-		\item Lines 113-118 comment: IASRI 4662745
-		\item Lines 123-126 comment: moved in another class: Configuration.java
-		\item Lines 161-170 no comment
-		\item Line 274 comment: code not reachable
-		\item Line 335 comment: code not executed
-		\item Line 369 no comment
-		\item Lines 387-395 has javadoc but no comment about why is commented out
-		\item Lines 498-499 no comment
-		\item Line 644 no comment
-		\item Lines 704-712 no comment
-		\item Lines 827-833 no comment
-		\item Lines 877-896 no comments
-		\item Lines 1449-1459 comment: Admin package is not supported anymore
-		\item Lines 1487-1504 no comment
-		\item Lines 1595-1600 comment: IASRI 4722883
-		\item Lines 1745-1754 comment IASRI 4662745
+		\item Lines 113-118 comment: IASRI 4662745;
+		\item lines 123-126 comment: moved in another class: Configuration.java;
+		\item lines 161-170 no comment;
+		\item line 274 comment: code not reachable;
+		\item line 335 comment: code not executed;
+		\item line 369 no comment;
+		\item lines 387-395 has javadoc but no comment about why is commented out;
+		\item lines 498-499 no comment;
+		\item line 644 no comment;
+		\item lines 704-712 no comment;
+		\item lines 827-833 no comment;
+		\item lines 877-896 no comments;
+		\item lines 1449-1459 comment: Admin package is not supported anymore;
+		\item lines 1487-1504 no comment;
+		\item lines 1595-1600 comment: IASRI 4722883;
+		\item lines 1745-1754 comment IASRI 4662745.
 	\end{itemize}
 \end{enumerate}
 \subsection{Java Source Files}
 \begin{enumerate}
 	\setcounter{enumi}{19}
 	\item Referring to the file containing the class in which there is our function, this constraint is not violated.
-	\item No public class constructor is specified in the file. There are only 2 package friendly constructors available at line 152 and 183 after class variables.
+	\item No public class constructor is specified in the file. There are only two package friendly constructors available at line 152 and 183 after class variables.
 	\item In some cases the Javadoc is not completed:
 	    \begin{itemize}
 	        \item in the first constructor, the Javadoc contains only one of the two parameters;
@@ -284,7 +284,7 @@
 	        \item in the function called "distributedForget", two parameters are not specified in the Javadoc;
 	        \item in the function called "commitOnePhase", two classes of exception are not specified in the Javadoc.
 	    \end{itemize}
-	\item Where javadoc is present it's almost complete. Some @param are missing in one constructor
+	\item Where the Javadoc is present, it's almost complete. Some @param are missing in one constructor.
 \end{enumerate}
 \subsection{Package and Import Statements}
 \begin{enumerate}
@@ -320,10 +320,10 @@
 			\item Some private vars mixed with static vars \color{red}KO\color{black}
 		\end{itemize}
 		\item Constructors: OK
-		\item Methods OK
+		\item Methods: OK
 	\end{itemize}
 	\item Only the method "getLAOResource" is not near the functions that work with the resources. The other methods are grouped by the functionality: at first, there are the two constructors; then the methods referring to work with the resources and finally there are the methods regarding the distribution of the messages.
-	\item Exceptions are often duplicates. Sometimes is obvious there was a copy-paste work
+	\item Exceptions are often duplicated. Sometimes it is obvious that there was a copy-paste work.
 \end{enumerate}
 \subsection{Initialization and Declaration}
 \begin{enumerate}
@@ -334,31 +334,31 @@
     
     Referring only to our class, the visibility of its private method is correct because it is used only by the class itself. 
 
-	\item All variables in the method distributeCommit are declared in the proper scope
+	\item All variables in the method "distributeCommit" are declared in the proper scope.
 	\item In this class, the constructors are not used.
-	\item All object refs in the method distributeCommit are initialized before their usage
+	\item All object references in the method "distributeCommit" are initialized before their usage.
 	\item Only in the method called "commitOnePhase" there are two variables that are declared but not initialized. These variables are "retry\_limit" and "no\_of\_attempts".
-	\item Some variables in the method distributeCommit are not declared at the start of a block:
+	\item Some variables in the method "distributeCommit" are not declared at the start of a block:
 	\begin{itemize}
-		\item Line 721
-		\item Line 722
-		\item Line 754
-		\item Line 755
+		\item line 721;
+		\item line 722;
+		\item line 754;
+		\item line 755.
 	\end{itemize}
 \end{enumerate}
 \subsection{Method Calls}
 \begin{enumerate}
 	\setcounter{enumi}{33}
 	\item In this class, only a method is used, the private one called "distributeForget". In this case, the parameters are presented in the correct order.
-	\item All methods have a unique name
+	\item All methods have a unique name.
 	\item In this class, only a method is used, the private one called "distributeForget". In this case, the method returned values are used properly.
 \end{enumerate}
 \subsection{Arrays}
 \begin{enumerate}
 	\setcounter{enumi}{36}
-	\item No arrays in the class
-	\item Referring to the class of our method, all the arrays and other collections indexes are prevented from going out-of-bounds.
-	\item No arrays in the class
+	\item Referring to the class of our method, there are no arrays here.
+	\item Referring to the class of our method, knowing that there are no arrays in this class, other collections indexes are prevented from going out-of-bounds.
+	\item Referring to the class of our method, there are no arrays here.
 \end{enumerate}
 \subsection{Object Comparison}
 \begin{enumerate}
@@ -381,15 +381,15 @@
 \subsection{Output Format}
 \begin{enumerate}
 	\setcounter{enumi}{40}
-	\item The only output in our method is in the logs. No spelling or grammatical errors are present, only some abbreviations
+	\item The only output in our method is in the logs. No spelling or grammatical errors are present, only some abbreviations.
 	\item According to the class of our method, the error messages are comprehensive, thanks also to the comments written that are referred to the code. But maybe it should be more meaningful to add others comments to explain better what it happens and how to solve the problem.
-	\item Some spaces in logs are replaced with underscores
+	\item Some spaces in logs are replaced with underscores.
 \end{enumerate}
 \subsection{Computation Comparison and Assignments}
 \begin{enumerate}
 	\setcounter{enumi}{43}
 	\item Only in the method "involved()", that return a boolean value, it's used the Brutish Programming: we are referring to the lines 410, 411 and 412.
-	\item Good parenthesizing, good operators order, no numerical operation
+	\item The parenthesizing and the operators order are good; there aren't numerical operations.
 	\item Referring to the class of our method, there are some lines in which the parenthesis are not used to avoid operator precedence problems:
 	    \begin{itemize}
 	        \item line 252;
@@ -415,25 +415,25 @@
 	        \item lines 1622 and 1623;
 	        \item line 1665. 
 	    \end{itemize}
-	\item In the class is not present any division
+	\item In the class, no divisions are present.
 	\item Integer arithmetic is used appropriately. Maybe, at lines 918 and 1181, referring to the two additions, it could happen overflows.
-	\item Comparison between boolean are made correctly
+	\item Comparison between boolean is made correctly.
 	\item Referring to lines 243, 304, 488, 538, 563, 653, 774, 1049, 1259, 1365 and 1577, it's better to be as specific as possible. So it's not correct to catch the Throwable class: it's too much general. Maybe it's better to use the Exception class, that it's general too: according to the Java documentation, "An Error is a subclass of Throwable that indicates serious problems that a reasonable application should not try to catch". 
 	
     At lines 262, 322, 862, 1124, 1287, 1426 and 1675, it's not specified how to manage the exception.
-	\item No implicit conversions are made in the class
+	\item No implicit conversions are made in the class.
 \end{enumerate}
 \subsection{Exceptions}
 \begin{enumerate}
 	\setcounter{enumi}{51}
 	\item All the relevant exceptions are caught: in fact, in the catch blocks, it is specified a superclass of exceptions, that is the Throwable class; in this way, it's very difficult not to cover all the exceptions that can happen in the class.
-	\item Every catch block handles correctly the thrown exception
+	\item Every catch block handles correctly the thrown exception.
 \end{enumerate}
 \subsection{Flow of Control}
 \begin{enumerate}
 	\setcounter{enumi}{53}
 	\item There are no switch statement in the class of our method.
-	\item No switch statements are present in the class
+	\item No switch statements are present in the class.
 	\item Referring to the class of our method, all the loops are correctly formed, with the appropriate initialization, increment and termination expressions.
 \end{enumerate}
 \subsection{Files}
