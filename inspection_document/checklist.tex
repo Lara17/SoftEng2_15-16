@@ -52,14 +52,14 @@
 	\item According to the function that we have to inspect, there are no one-character variables used.
 	\item There is only one class called "RegisteredResources", that is a noun with capitalized letters for every word.
 	\item Although our function belongs to a class, there are no interface to consider.
-	\item Methods are all verbs and all are written in camelcase.
+	\item Methods are all verbs and all of them are written in camelcase.
 	\item The variable "private static boolean lastXAResCommit" is a bit ambiguous: we don't know if the two letters "XA" define an abbreviation or something else. In the other cases, all the attributes are written in the right way.
 	\item Constants LOG\textunderscore SECTION\textunderscore NAME and HEURISTIC\textunderscore LOG\textunderscore SECTION\textunderscore NAME are all in uppercase.
 \end{enumerate}
 \subsection{Indention}
 \begin{enumerate}
 	\setcounter{enumi}{7}
-	\item Although the class code has a clear order, there are some lines in which the tab is used, some lines in which both tabs and spaces are used and some lines in which there are used more or less than four spaces. According to the first case:
+	\item Although the method code has a clear order, there are some lines in which the tab is used, some lines in which both tabs and spaces are used and some lines in which there are used more or less than four spaces. According to the first case:
 	    \begin{itemize}
 	        \item lines from 758 (included) to 764 (included);
 	        \item lines from 766 (included) to 772 (included);
@@ -274,7 +274,7 @@
 \begin{enumerate}
 	\setcounter{enumi}{19}
 	\item Referring to the file containing the class in which there is our function, this constraint is not violated.
-	\item No public class constructor is specified in the file. There are only two package friendly constructors available at line 152 and 183 after class variables.
+	\item No public class constructor is specified in the file. There are only two package friendly constructors available at lines 152 and 183 after class variables.
 	\item In some cases the Javadoc is not completed:
 	    \begin{itemize}
 	        \item in the first constructor, the Javadoc contains only one of the two parameters;
@@ -296,31 +296,31 @@
 	\setcounter{enumi}{24}
 	\item
 	\begin{itemize}
-		\item Class documentation comment: OK
-		\item Class statement: OK
-		\item Class implementation comment: optional, not present in this class
+		\item Class documentation comment: OK.
+		\item Class statement: OK.
+		\item Class implementation comment: optional, not present in this class.
 		\item Class variables:
 		\begin{itemize}
-			\item No public vars OK
+			\item no public vars OK;
 			
-			\item No protected vars OK
+			\item no protected vars OK;
 			
-			\item No package vars OK
+			\item no package vars OK;
 			
-			\item Some private vars mixed with static vars \color{red}KO \color{black}
+			\item some private vars mixed with static vars \color{red}KO \color{black};
 		\end{itemize}
 		\item Instance variables:
 		\begin{itemize}
-			\item No public vars OK
+			\item no public vars OK;
 			
-			\item No protected vars OK
+			\item no protected vars OK;
 			
-			\item No package vars OK
+			\item no package vars OK;
 			
-			\item Some private vars mixed with static vars \color{red}KO\color{black}
+			\item some private vars mixed with static vars \color{red}KO\color{black};
 		\end{itemize}
-		\item Constructors: OK
-		\item Methods: OK
+		\item Constructors: OK.
+		\item Methods: OK.
 	\end{itemize}
 	\item Only the method "getLAOResource" is not near the functions that work with the resources. The other methods are grouped by the functionality: at first, there are the two constructors; then the methods referring to work with the resources and finally there are the methods regarding the distribution of the messages.
 	\item Exceptions are often duplicated. Sometimes it is obvious that there was a copy-paste work.
@@ -382,13 +382,13 @@
 \begin{enumerate}
 	\setcounter{enumi}{40}
 	\item The only output in our method is in the logs. No spelling or grammatical errors are present, only some abbreviations.
-	\item According to the class of our method, the error messages are comprehensive, thanks also to the comments written that are referred to the code. But maybe it should be more meaningful to add others comments to explain better what it happens and how to solve the problem.
+	\item According to the class of our method, the error messages are comprehensive, thanks also to the comments written that are referred to the code. But maybe it should be more meaningful to add others comments to explain better what it happens and how to solve the problems.
 	\item Some spaces in logs are replaced with underscores.
 \end{enumerate}
 \subsection{Computation Comparison and Assignments}
 \begin{enumerate}
 	\setcounter{enumi}{43}
-	\item Only in the method "involved()", that return a boolean value, it's used the Brutish Programming: we are referring to the lines 410, 411 and 412.
+	\item Only in the method "involved()", that return a boolean value, it's used the Brutish Programming: we are referring to the lines 410, 411 and 412. Maybe, referring to two "catch" blocks (the first "catch" located from line 1049, included, to line 1140, included; the second "catch" located from line 1577, included, to line 1700, included), it could be used a switch, instead of "if", "else if" and "else" conditions. 
 	\item The parenthesizing and the operators order are good; there aren't numerical operations.
 	\item Referring to the class of our method, there are some lines in which the parenthesis are not used to avoid operator precedence problems:
 	    \begin{itemize}
@@ -416,7 +416,7 @@
 	        \item line 1665. 
 	    \end{itemize}
 	\item In the class, no divisions are present.
-	\item Integer arithmetic is used appropriately. Maybe, at lines 918 and 1181, referring to the two additions, it could happen overflows.
+	\item Integer arithmetic is used appropriately. Maybe, at lines 918 and 1181, referring to the two additions, overflows could happen.
 	\item Comparison between boolean is made correctly.
 	\item Referring to lines 243, 304, 488, 538, 563, 653, 774, 1049, 1259, 1365 and 1577, it's better to be as specific as possible. So it's not correct to catch the Throwable class: it's too much general. Maybe it's better to use the Exception class, that it's general too: according to the Java documentation, "An Error is a subclass of Throwable that indicates serious problems that a reasonable application should not try to catch". 
 	
@@ -432,8 +432,8 @@
 \subsection{Flow of Control}
 \begin{enumerate}
 	\setcounter{enumi}{53}
-	\item There are no switch statement in the class of our method.
-	\item No switch statements are present in the class.
+	\item There are no "switch" statements in the class of our method.
+	\item No "switch" statements are present in the class.
 	\item Referring to the class of our method, all the loops are correctly formed, with the appropriate initialization, increment and termination expressions.
 \end{enumerate}
 \subsection{Files}
@@ -445,6 +445,6 @@
 	\item In the class of our method, there are no files used.
 \end{enumerate}
 \subsection{Other Problems Encountered}
-	The class file is very long in fact it its 1758 lines. Probably dividing it in more than one class would improve readability and maintainability.
+	The class file is very long: in fact, it has 1758 lines. Probably dividing it in more than one class would improve readability and maintainability.
 	
-	Some catch statements contain multiple \ttfamily else if \normalfont statement, in this case using a switch can greatly improve readability and the catch block can be shortened by adding more method to handle this massive use of else if statement that make the method much longer.
+	Some "catch" statements contain multiple \ttfamily else if \normalfont statement; in this case using a "switch" can greatly improve readability and the catch block can be shortened by adding more method to handle this massive use of else if statement that make the method much longer.
