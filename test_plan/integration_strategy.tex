@@ -3,7 +3,7 @@
 	Before starting the test phase the following doucments must be ready and read:
 	\begin{itemize}
 		\item The Design Document of previous delivery to understand how the software is built. In particular the component view which specifies how the various modules of the system are connected to each other.
-		\item Sections 2.3 and 2.4 of this document that explains which explains which strategy we use and the testing order of every module and submodule.
+		\item Sections 2.3 and 2.4 of this document that explains which test strategy we use and the testing order of every module and submodule.
 		\item How the database is built and which data it contains
 		
 		Also before testing each module that comes after some other module in the testing order:
@@ -15,9 +15,7 @@
 			\includegraphics[width=0.95\textwidth]{./images/test_modules.png}
 		\end{center}
 		The system to be tested is represented in this image. Every submodule has to be tested after all his predecessors in testing order, specified in section 2.5, have been tested. The system can be divided in 3 modules, and every module can be divided in submodules.
-		\newline
-		\newline
-		\noindent \textbf{Modules to be Tested}
+		\subsubsection{Modules to be Tested}
 		
 		\begin{itemize}
 			\item \textbf{Application Server}
@@ -58,7 +56,7 @@ It's indifferent to use the bottom-up strategy or the top-down one. In this docu
 \subsubsection{Integration Sequence}
 Considering the bottom-up strategy, first of all, we will test the module called "Application Server", and, in particular, its submodules, represented in the image below:
     \begin{center}
-	    \includegraphics[width=0.28\textwidth]{./images/ModuleApplicationServer.png}~\\[1.5cm] 
+	    \includegraphics[width=0.21\textwidth]{./images/ModuleApplicationServer.png}~\\[1.5cm] 
     \end{center}	
 After that, we can test two modules:
 	\begin{itemize}
@@ -70,4 +68,5 @@ After that, we can test two modules:
 		    \begin{center}
 			    \includegraphics[width=0.85\textwidth]{./images/ModuleUserInterface.png}~\\[1.5cm] 
 			\end{center}
+		The arrows represent the testing order.
 	\end{itemize}
