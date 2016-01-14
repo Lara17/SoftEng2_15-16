@@ -1,4 +1,58 @@
 \section{Individual Steps and Test Description}
+\subsection{Integration test case I1}
+\begin{tabular} {l p{9cm}}
+	\hline \textbf{Test Case Identifier} & I1T1 \\
+	\hline \textbf{Test Item(s)} & Taxi Registration Manager $\rightarrow$ Taxi Authentication Manager  \\
+	\hline \textbf{Input Specification} & Create typical Taxi Registration Manager input \\
+	\hline \textbf{Output Specification} & Check if the correct functions work well in Taxi Authentication Manager \\
+	\hline \textbf{Environmental needs} & Unit test completed successfully \\
+	\hline 
+\end{tabular}
+\subsection{Integration test case I2}
+\begin{tabular} {l p{9cm}}
+	\hline \textbf{Test Case Identifier} & I2T1 \\
+	\hline \textbf{Test Item(s)} & Taxi Authentication Manager $\rightarrow$ Location Manager \\
+	\hline \textbf{Input Specification} & Create typical Taxi Authentication Manager input \\
+	\hline \textbf{Output Specification} & Check if the correct functions work well in Location Manager \\
+	\hline \textbf{Environmental needs} & I1 succeeded \\
+	\hline 
+\end{tabular}
+\subsection{Integration test case I3}
+\begin{tabular} {l p{9cm}}
+	\hline \textbf{Test Case Identifier} & I3T1 \\
+	\hline \textbf{Test Item(s)} & Location Manager $\rightarrow$ Queue Manager \\
+	\hline \textbf{Input Specification} & Create typical Location Manager input \\
+	\hline \textbf{Output Specification} & Check if the correct functions work well in Queue Manager \\
+	\hline \textbf{Environmental needs} & I2 succeeded \\
+	\hline 
+\end{tabular}
+\subsection{Integration test case I4}
+\begin{tabular} {l p{9cm}}
+	\hline \textbf{Test Case Identifier} & I4T1 \\
+	\hline \textbf{Test Item(s)} & Queue Manager $\rightarrow$ Booking Manager \\
+	\hline \textbf{Input Specification} & Create typical Queue Manager input \\
+	\hline \textbf{Output Specification} & Check if the correct functions work well in Booking Manager \\
+	\hline \textbf{Environmental needs} & I3 succeeded \\
+	\hline 
+\end{tabular}
+\subsection{Integration test case I5}
+\begin{tabular} {l p{9cm}}
+	\hline \textbf{Test Case Identifier} & I5T1 \\
+	\hline \textbf{Test Item(s)} & Booking Manager $\rightarrow$ Delay Notifications Manager \\
+	\hline \textbf{Input Specification} & Create typical Booking Manager input \\
+	\hline \textbf{Output Specification} & Check if the correct functions work well in Delay Notifications Manager \\
+	\hline \textbf{Environmental needs} & I4 succeeded \\
+	\hline 
+\end{tabular}
+\subsection{Integration test case I6}
+\begin{tabular} {l p{9cm}}
+	\hline \textbf{Test Case Identifier} & I6T2 \\
+	\hline \textbf{Test Item(s)} & Taxi Registration Interface $\rightarrow$ Taxi Login Interface \\
+	\hline \textbf{Input Specification} & Create typical Taxi Registration Interface input \\
+	\hline \textbf{Output Specification} & Check if the correct functions work well in Taxi Login Interface \\
+	\hline \textbf{Environmental needs} & Application Server \\
+	\hline 
+\end{tabular}
 \subsection{Integration Test Case I7}
 \begin{tabular}{l p{9cm}}
 	\hline
