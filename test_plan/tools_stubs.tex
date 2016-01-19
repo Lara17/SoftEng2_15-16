@@ -5,3 +5,64 @@
 	
 	Once the system is fully tested using the tools above, the performance of the system can be analyzed using a software like \textit{Apache JMeter}; in this way an average loads or a stress test can be run to see how the system behaves in every situation.
 \section{Program Stub and Test Data Required}
+	We have considered some stubs and drivers for our system.
+	\subsection{Module Application Server}
+		According to this module, the stubs are represented in the list below:
+		\begin{itemize}
+			\item one for the "Taxi Authentication Manager", that simulates the "Taxi Registration Manager";
+			\item one for the "Location Manager", that simulates the "Taxi Authentication Manager"; 
+			\item one for the "Queue Manager", that simulates the "Location Manager";
+			\item one for the "Booking Manager", that simulates the "Queue Manager";
+			\item one for the "Delay Notifications Manager", that simulates the "Booking Manager";
+			\item one for the whole module, that simulates the "Delay Notifications Manager".
+		\end{itemize}
+		
+		Instead, the drivers are:
+		\begin{itemize}
+			\item one for the "Taxi Registration Manager";
+			\item one for the "Taxi Authentication Manager";
+			\item one for the "Location Manager";
+			\item one for the "Queue Manager";
+			\item one for the "Booking Manager";
+			\item one for the "Delay Notifications Manager";
+			\item one for the whole module.
+		\end{itemize}
+	
+	\subsection{Module Taxi Interface}
+		According to this module, the stubs are represented in the list below:
+		\begin{itemize}
+			\item one for the "Taxi Login Interface", that simulates the "Taxi Registration Interface";
+			\item one for the "Information Current Ride Interface", that simulates the "Taxi Login Interface";
+			\item one for the "Rides History Interface", that simulates the "Taxi Login Interface";
+			\item one for the "Notification Delay Interface", that simulates the "Taxi Login Interface";
+			\item one for the whole module, that simulates the "Information Current Ride Interface", "Rides History Interface" and "Notification delay Interface".
+		\end{itemize}
+		
+		Instead, the drivers are:
+		\begin{itemize}
+			\item one for the "Taxi Registration Interface";
+			\item one for the "Taxi Login Interface";
+			\item one for the "Information Current Ride Interface";
+			\item one for the "Rides History Interface";
+			\item one for the "Notification Delay Interface";
+			\item one for the whole module.
+		\end{itemize}
+	
+	\subsection{Module User Interface}
+		According to this module, the stubs are represented in the list below:
+		\begin{itemize}
+			\item one for the "Long-term Reservation Modification Interface", that simulates the "Booking Interface";
+			\item one for the "Long-term Reservation Delete Interface", that simulates the "Booking Interface";
+			\item one for the "Long-term Reservation Info Interface", that simulates the "Booking Interface";
+			\item one for the whole module, that simulates the "Long-term Reservation Modification Interface", the "Long-term Reservation Delete Interface", the "Long-term Reservation Info Interface" and the "Information Interface"
+		\end{itemize}
+		
+		Instead, the drivers are:
+		\begin{itemize}
+			\item one for the "Booking Interface";
+			\item one for the "Long-term Reservation Modification Interface";
+			\item one for the "Long-term Reservation Delete Interface";
+			\item one for the "Long-term Reservation Info Interface";
+			\item one for the "Information Interface";
+			\item one for the whole module.
+		\end{itemize}
