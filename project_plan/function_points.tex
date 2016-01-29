@@ -2,13 +2,13 @@
 The Functional Point approach is an algorithmic technique, defined in 1975 by Allan Albrecht, that allows to evaluate the effort needed to develop a project. The functionalities list has been obtained from the RASD and the Design Document evaluating every specific function.
 The functionalities have been groped in:
 \begin{itemize}
-	\item \textbf{Internal Logic Files:} homogeneous set of data used and managed by the application
-	\item \textbf{External Interface Files:} homogeneous set of data used by the application but generated and maintained by other applications
-	\item \textbf{External Input:} Elementary operation to elaborate data coming form the external environment
-	\item \textbf{External Output:} Elementary operation that generates data for the external environment\footnote{It usually includes the elaboration of data from logic files}
-	\item \textbf{External Inquiry:} Elementary operation that involves input and output\footnote{Without significant elaboration of data from logic files}
+	\item \textbf{Internal Logic Files:} homogeneous set of data used and managed by the application;
+	\item \textbf{External Interface Files:} homogeneous set of data used by the application but generated and maintained by other applications;
+	\item \textbf{External Input:} elementary operation to elaborate data coming from the external environment;
+	\item \textbf{External Output:} elementary operation that generates data for the external environment\footnote{It usually includes the elaboration of data from logic files};
+	\item \textbf{External Inquiry:} elementary operation that involves input and output\footnote{Without significant elaboration of data from logic files}.
 \end{itemize}
-The following table specifies the function points values we have used
+The following table specifies the function points values we have used:
 
 \begin{tabular}{|c|c|c|c|}\hline
 	\multirow{2}{*}{Function Type} & \multicolumn{3}{c|}{Complexity} \\ \cline{2-4}
@@ -20,20 +20,20 @@ The following table specifies the function points values we have used
 	External Inquiry& 3 & 4 & 6 \\ \hline
 \end{tabular} 
 
-Based on the specified combination of program characteristics a weight is associated with each of these FP counts; the total is computed by multiplying each raw count by the weight and summing all partial values.
+Based on the specified combination of program characteristics, a weight is associated with each of these FP counts; the total is computed by multiplying each raw count by the weight and summing all partial values.
 $$\sum \#ElementsOfGivenType * Weight$$
 \subsection{Internal Logic Files}
-In the system there are different kind of ILFs. For the booking history, bookings info and taxi list we have identified a simple weight complexity; the queue management instead have a complex weight since has to manage a high number of taxis, zones and queues.
+In the system, there are different kind of ILFs. For the booking history, bookings info and taxi list we have identified a simple weight complexity; the queue management, instead, has a complex weight since has to manage a high number of taxis, zones and queues.
 $$FP_{ILF}=7*3+15*1=36$$
 \subsection{External Interface Files}
-In the system there are only one EIF which is the location management. It is a simple complex weight since it only has to retrieve information from the taxis GPSs. We can consider this as a simple complexity.$$FP_{EIF}=5*1=5$$
+In the system, there are only one EIF which is the location management. It is a simple complex weight since it only has to retrieve information from the taxis GPSs. We can consider this as a simple complexity.$$FP_{EIF}=5*1=5$$
 \subsection{External Input}
-There are several external inputs in the system. On the side of the user there are the booking registration, booking modification and booking deletion. On the side of the taxi there are the login/logout and the registration. All the inputs can be considered as simple since they do not require much data manipulation. $$FP_{EInput}=3*5=15$$
+There are several external inputs in the system. On the side of the user, there are the bookings registration, long-term reservations modification and long-term reservations deletion. On the side of the taxi, there are the login/logout and the registration. All the inputs can be considered as simple since they do not require much data manipulation. $$FP_{EInput}=3*5=15$$
 \subsection{External Output}
-The only external output in the system are the different types of notification. We consider them as medium complexity since there are different type of notification. $$FP_{EO}=5*1=5$$
+The only external output in the system are the different types of notification. We consider them as medium complexity since there are different types of notification. $$FP_{EO}=5*1=5$$
 \subsection{External Inquiry}
-There are several external inquiries in the system. On the user side there are the company information and the booking information. On the taxi side there are the rides information and the current ride information. We consider the user booking information and the taxi ride history as medium complexity, the company information instead we consider it as simple. $$FP_{EInquiry}=3*1+4*2=11$$
+There are several external inquiries in the system. On the user side, there are the company information and the long-term reservations information. On the taxi side, there are the rides information and the current ride information. We consider the user long-term reservations information and the taxi ride history as medium complexity; instead, we consider the company information and the current ride information as simple. $$FP_{EInquiry}=3*1+4*2=11$$
 
 \subsection{Summing Up}
-Summing all the partial results of the previous sections we obtain the Unadjusted Function Point.
+Summing all the partial results of the previous sections, we obtain the Unadjusted Function Point.
 $$UFP=FP_{ILF}+FP_{EIF}+FP_{EInput}+FP_{EO}+FP_{EInquiry}$$ $$UFP=36+5+15+5+11=72$$
